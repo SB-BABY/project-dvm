@@ -1,0 +1,110 @@
+// !записываем глобальные переменные проекта
+
+//так записываются переменные
+
+:root {
+	// переменная для цвета
+	--color-dark: #1B1B1B; //заголовок
+	--color-black: #262a42;
+	--color-light: #ffffff;
+	--color-accent: #7E3FE0;
+	--color-accent-dark: #391D66;
+	--color-gray: #72787D;
+	--color-gray-link: #656565;
+	--color-gray-dark: #262a42;
+	--color-gray-light: #ededed;
+	--color-blue: #097fb7;
+	--color-blue-second: #0089c9;
+	--color-blue-light: #A9E0FF;
+	--color-blue-light-second: #E7F3F8;
+	--color-border-light: #fff;
+	// button
+	--color-btn: rgba(0, 0, 0, 0.5);
+	// hero
+	--color-bg-hero: linear-gradient(0deg, #e7f3f8 0%, #a9e0ff 100%);
+	// about
+	--color-bg-about: linear-gradient(180deg, #e7f3f8 0%, #c3ecfd 26.92%, #b2e8ff 53.37%, #c3ecfd 71.63%, #e7f3f8 100%);
+	--color-bg-right: rgba(255, 255, 255, 0.5);
+	// director
+	--color-bg-director: linear-gradient(180deg, #e7f3f8 0%, #c3ecfd 26.92%, #b2e8ff 53.37%, #c3ecfd 71.63%, #e7f3f8 100%);
+	--color-content-director: linear-gradient(269deg, rgb(255, 255, 255) 80%, #0073a9 100%);
+	//advantages
+	--color-bg-advantages: linear-gradient(180deg, #e7f3f8 0%, #b7e9fe 34.48%, #e7f3f8 69.55%);
+	// accordion-section
+	--color-bg-accordion: rgba(255, 255, 255, 0.67);
+	//form
+	--color-form-title: radial-gradient(50.00% 50.00% at 50.00% 50.00%, rgb(38, 42, 66) 29.807692766189575%, rgb(9, 127, 183) 96.15384340286255%);
+	--color-option: rgba(154, 198, 218, 0.3);
+	// documents
+	--border-doc-border: rgba(7, 7, 7, 0.18);
+	// footer
+	--color-dark-footer: #1B1B1B;
+	--color-light-footer: #ffffff;
+	// переменные для рамок
+	--border: 1px solid var(--color-light);
+	--border-radius: 14px;
+	--border-radius-small: 7px;
+	--border-radius-large: 45px;
+	// переменные для цвета
+	--shadow: 0 5px 0 0 var(--color-black);
+	// переменные для семейства шрифтов
+	--font-family-regular: "sansRegular", sans-serif;
+	--font-family-bold: "sansBold", sans-serif;
+	--trial-bold: "trialBold", sans-serif;
+	--trial-demi-bold: "trialDemiBold", sans-serif;
+	// переменные для ширины класса контейнера и отступа по Х
+	--container-width: 1240px;
+	--container-padding-x: 20px;
+	// переменные для отступа по Y  для секций
+	--section-padding-y: 70px;
+	// высота для кнопок и полей ввода
+	--input-height: 59px;
+	--button-height: 68px;
+	--button-height-small: 40px;
+
+	--transition-duration: 0.2s;
+
+	@include desktop {
+		--section-padding-y: 50px;
+	}
+
+	@include mobile {
+		--section-padding-y: 30px;
+	}
+}
+
+:root.dark-theme {
+	--color-dark: #ffffff; //заголовк
+	--color-black: #fff;
+	--color-light: #002232;
+	--color-accent: #7E3FE0;
+	--color-accent-dark: #391D66;
+	--color-gray: #72787D;
+	--color-gray-link: #fff;
+	--color-gray-dark: #262a42;
+	--color-gray-light: #ededed;
+	--color-blue: #fff;
+	--color-blue-second: #fff;
+	--color-blue-light: #A9E0FF;
+	--color-blue-light-second: #004866;
+	--color-border-light: #fff;
+	// button
+	--color-btn: rgba(255, 255, 255, 0.5);
+	// hero
+	--color-bg-hero: linear-gradient(0deg, #004566 50%, #a9e0ff 100%);
+	// about
+	--color-bg-about: linear-gradient(180deg, #004566 0%, rgba(169, 224, 255, 0.62) 100%);
+	--color-bg-right: rgba(0, 62, 91, 0.54);
+	// director
+	--color-bg-director:  linear-gradient(360deg, #004566 33.17%, rgba(169, 224, 255, 0.62) 100%);
+	--color-content-director:  linear-gradient(270deg, #004566 85%, rgba(242, 251, 255, 0.76) 100%);
+	//advantages
+	--color-bg-advantages: linear-gradient(180deg, #004566 0%);;
+	// accordion-section
+	--color-bg-accordion: rgba(34, 42, 53, 0.33);
+	//form
+	--color-form-title: radial-gradient(50.00% 50.00% at 50.00%  50.00%, rgb(255, 255, 255) 29.807692766189575%, rgb(9, 127, 183) 96.15384340286255%);
+	--color-option: rgba(154, 198, 218, 0.3);
+	// documents
+	--border-doc-border: #fff;
+}

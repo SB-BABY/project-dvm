@@ -1,0 +1,89 @@
+// Стили для секции hero
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-bg-hero);
+    padding-top: 57px;
+    padding-bottom: 220px;
+
+    @include mobile {
+        padding-bottom: 100px;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 10;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: -10%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    &__left,
+    &__right {
+        position: relative;
+        z-index: 6;
+    }
+
+
+    &__title {
+        font-family: var(--trial-bold);
+        text-transform: uppercase;
+        @include fluid-text(38, 30);
+        line-height: 120%;
+        color: var(--color-dark);
+
+        @include mobile {
+            max-width: 340px;
+        }
+    }
+
+    &__text {
+        line-height: 140%;
+        @include fluid-text(18, 15);
+        margin-bottom: 7px;
+
+        @include mobile {
+            max-width: 340px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 35px;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__item {
+        @include fluid-width(652, 370);
+        @include fluid-height(358, 204);
+        border: 3px solid var(--color-border-light);
+        border-radius: 42px;
+        overflow: hidden;
+        position: relative;
+
+        &-img {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            @include abs-center
+        }
+    }
+
+}
