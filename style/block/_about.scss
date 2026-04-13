@@ -12,29 +12,31 @@
         column-gap: 29px;
         position: relative;
 
-        @include mobile{
+        @include mobile {
             flex-direction: column;
             row-gap: 38px;
             align-items: stretch;
         }
     }
 
-    &__bg{
+    &__bg {
         position: absolute;
-        top: -25%;
+        top: 2%;
         left: 30%;
         transform: translate(-50%, -50%);
         z-index: 5;
+        width: 70%;
+        height: auto;
 
-        @include desktop{
+        @include desktop {
             top: -20%;
         }
 
-        @include tablet{
+        @include tablet {
             top: 0%;
         }
 
-        @include mobile{
+        @include mobile {
             top: -10%;
             left: 50%;
         }
@@ -48,11 +50,11 @@
         min-height: 340px;
         padding: 28px 32px;
         color: var(--color-black);
-        // max-width: 510px;
+        max-width: 520px;
         position: relative;
         z-index: 10;
 
-        @include mobile{
+        @include mobile {
             min-height: auto;
         }
 
@@ -98,7 +100,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 14px;
 
-        @include tablet{
+        @include tablet {
             grid-template-columns: repeat(1, 1fr);
         }
     }
@@ -114,7 +116,7 @@
         column-gap: 12px;
         min-height: 155px;
 
-        @include tablet{
+        @include tablet {
             min-height: 60px;
         }
 
