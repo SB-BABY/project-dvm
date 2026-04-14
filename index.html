@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <!-- SLIDER -->
     <!-- Добавляем стили из CDN -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -22,7 +26,7 @@
     <header class="header">
         <div class="container header__container">
             <div class="header__logo">
-                <a href="#" class="header__logo-link">
+                <a href="javascript:location.reload();" class="header__logo-link">
                     <img src="./img/header/logo.svg" alt="Логотип" width="56px" height="56px" class="header__logo-img">
                     <span class="header__logo-text">Центр <br> комплексного <br> развития <br> компетенций</span>
                 </a>
@@ -31,10 +35,9 @@
             <nav class="header__nav">
                 <ul class="header__lists">
                     <li class="header__item"><a href="#about" class="header__link">О нас</a></li>
-                    <li class="header__item"><a href="" class="header__link">Проекты</a></li>
-                    <li class="header__item"><a href="" class="header__link">Мероприятия</a></li>
-                    <li class="header__item"><a href="" class="header__link">Ценности</a></li>
-                    <li class="header__item"><a href="#footer" class="header__link">Контакты</a></li>
+                    <li class="header__item"><a href="#advantages" class="header__link">Программы</a></li>
+                    <li class="header__item"><a href="" class="header__link">Кейсы</a></li>
+                    <li class="header__item"><a href="#documents" class="header__link">Сведения</a></li>
                 </ul>
             </nav>
 
@@ -43,16 +46,17 @@
                     <img src="./img/header/eye.svg" alt="Версия для слепых">
                 </a>
 
-                <a href="#" class="header__icon-telega header__icon">
+                <a href="https://t.me/+4sVVcg3BrUkyZjAy" class="header__icon-telega header__icon" target="_blank">
                     <img src="./img/header/telega.svg" alt="Ссылка на телеграм">
                 </a>
 
-                <a href="#" class="header__icon-vk header__icon">
-                    <img src="./img/header/vk.svg" alt="Ссылка на Вконтакте">
+                <a href="https://max.ru/join/KoRh7GnI1sQrUC0wV01pDIU-P9TDKD60u9Sc26pRO6U"
+                    class="header__icon-max header__icon" target="_blank">
+                    <img src="./img/header/max.svg" alt="Ссылка на Макс">
                 </a>
 
-                <a href="#" class="header__icon-max header__icon">
-                    <img src="./img/header/max.svg" alt="Ссылка на Макс">
+                <a href="https://vk.com/club236747807" class="header__icon-vk header__icon" target="_blank">
+                    <img src="./img/header/vk.svg" alt="Ссылка на Вконтакте">
                 </a>
             </div>
         </div>
@@ -61,6 +65,18 @@
 
     <!-- MAIN -->
     <main class="main">
+        <!-- BURGER -->
+        <div id="fab" class="fab">
+            <button id="burger" class="burger">☰</button>
+        </div>
+
+        <div id="menu" class="side-menu">
+            <a href="#about">О нас</a>
+            <a href="#advantages">Программы</a>
+            <a href="#">Кейсы</a>
+            <a href="#documents">Сведения</a>
+        </div>
+        <!-- BURGER -->
 
         <!-- HERO -->
         <section class="hero">
@@ -252,14 +268,57 @@
 
                     <img src="./img/director/circle-bg.png" alt="Декорация" class="director__img-circle">
 
+                    <div class="director__info">
+                        <p>
+                            Вы&nbsp;здесь, а&nbsp;значит, вы&nbsp;один из&nbsp;тех, кто не&nbsp;просто думает
+                            о&nbsp;достижении результатов вместе со&nbsp;своей командой, но&nbsp;и&nbsp;реально делает.
+                            В&nbsp;этом мы&nbsp;с&nbsp;вами похожи.
+                        </p>
+
+                        <p>
+                            В&nbsp;Центре мы&nbsp;занимаемся развитием управленческих команд и&nbsp;бизнеса через
+                            образование и&nbsp;работу
+                            с
+                            реальными задачами, чтобы вы&nbsp;на&nbsp;практике получали быстрые и&nbsp;долгосрочные
+                            результаты уровня
+                            &laquo;Вау!&raquo;.
+                        </p>
+
+                        <p>
+                            Я&nbsp;уверена, что инвестиции в&nbsp;команду&nbsp;&mdash; это про двустороннее движение,
+                            где компания получает результат, а&nbsp;команда&nbsp;&mdash; рост.
+                        </p>
+
+                        <p>
+                            Наша задача&nbsp;&mdash; помогать компаниям становится местом, где есть чёткие правила,
+                            нормальная
+                            коммуникация и&nbsp;включённость, а&nbsp;результат становится закономерным итогом работы
+                            команды.
+                        </p>
+
+                        <p>
+                            И&nbsp;самый быстрый и&nbsp;эффективный способ это сделать&nbsp;&mdash; выстроить грамотную
+                            образовательную
+                            программу, которая будет подходить именно вам.
+                        </p>
+
+                        <p>
+                            Если вам близок такой подход, то&nbsp;давайте работать над этим вместе.
+                        </p>
+
+                    </div>
+
                     <div class="director__text">
-                        <h2 class="director__title">
-                            Руководитель Центра
-                        </h2>
                         <p class="director__name">
                             Александра Бальчугова
                         </p>
+                        <h2 class="director__title">
+                            Руководитель Центра комплексного <br>
+                            развития компетенций АНО &laquo;Агентство инноваций&raquo;
+                        </h2>
                     </div>
+
+
 
                 </div>
             </div>
@@ -267,7 +326,7 @@
         <!-- DIRECTOR -->
 
         <!-- ADVANTAGES -->
-        <section class="advantages">
+        <section class="advantages" id="advantages">
             <img src="./img/advantages/bg.png" alt="Фоновое изображение" class="advantages__img-bg">
             <div class="advantages__container container">
                 <h2 class="advantages__title">
@@ -369,7 +428,7 @@
                                 </p>
                             </div>
 
-                            <a href="#" class="accordion__bottom-button button-second">
+                            <a href="#form" class="accordion__bottom-button button-second">
                                 Узнать больше
                                 <div class="button-arrow">
                                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
@@ -420,7 +479,7 @@
                                 </p>
                             </div>
 
-                            <a href="#" class="accordion__bottom-button button-second">
+                            <a href="#form" class="accordion__bottom-button button-second">
                                 Узнать больше
                                 <div class="button-arrow">
                                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
@@ -466,7 +525,7 @@
                                 </p>
                             </div>
 
-                            <a href="#" class="accordion__bottom-button button-second">
+                            <a href="#form" class="accordion__bottom-button button-second">
                                 Узнать больше
                                 <div class="button-arrow">
                                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
@@ -517,7 +576,7 @@
                                 </p>
                             </div>
 
-                            <a href="#" class="accordion__bottom-button button-second">
+                            <a href="#form" class="accordion__bottom-button button-second">
                                 Узнать больше
                                 <div class="button-arrow">
                                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
@@ -565,7 +624,7 @@
                                 </p>
                             </div>
 
-                            <a href="#" class="accordion__bottom-button button-second">
+                            <a href="#form" class="accordion__bottom-button button-second">
                                 Узнать больше
                                 <div class="button-arrow">
                                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
@@ -610,7 +669,7 @@
                                 </p>
                             </div>
 
-                            <a href="#" class="accordion__bottom-button button-second">
+                            <a href="#form" class="accordion__bottom-button button-second">
                                 Узнать больше
                                 <div class="button-arrow">
                                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
@@ -660,7 +719,7 @@
                                 </p>
                             </div>
 
-                            <a href="#" class="accordion__bottom-button button-second">
+                            <a href="#form" class="accordion__bottom-button button-second">
                                 Узнать больше
                                 <div class="button-arrow">
                                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
@@ -710,7 +769,7 @@
                                 </p>
                             </div>
 
-                            <a href="#" class="accordion__bottom-button button-second">
+                            <a href="#form" class="accordion__bottom-button button-second">
                                 Узнать больше
                                 <div class="button-arrow">
                                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
@@ -757,7 +816,7 @@
                                 </p>
                             </div>
 
-                            <a href="#" class="accordion__bottom-button button-second">
+                            <a href="#form" class="accordion__bottom-button button-second">
                                 Узнать больше
                                 <div class="button-arrow">
                                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
@@ -837,6 +896,12 @@
 
                 <form class="form__body" id="contactForm">
 
+                    <!-- honeypot антиспам -->
+                    <div class="form__honeypot">
+                        <input type="text" name="website">
+                        <input type="text" name="company_name">
+                    </div>
+
                     <div class="form__grid">
 
                         <div class="form__group">
@@ -845,7 +910,8 @@
                         </div>
 
                         <div class="form__group">
-                            <input type="tel" name="phone" placeholder="Номер телефона" maxlength="18" required>
+                            <input type="tel" name="phone" placeholder="Номер телефона" maxlength="18"
+                                autocomplete="tel" inputmode="tel" required>
                             <span class="form__error"></span>
                         </div>
 
@@ -888,19 +954,19 @@
 
                     <div class="form__bottom">
 
-                        <button type="submit" class="form__button" onclick="alert('Форма отправлена')">
+                        <button type="submit" class="form__button">
                             Оставить заявку
                         </button>
 
                         <div class="form__political">
                             <label class="form__checkbox">
                                 <input type="checkbox" required class="checbox-input">
-                                <span>Даю согласие на сбор <br> <a href="#">персональных данных</a></span>
+                                <span>Даю согласие на сбор <br> <a href="./documents/pers-dan.docx" target="_blank">персональных данных</a></span>
                             </label>
 
                             <label class="form__checkbox">
                                 <input type="checkbox" required class="checbox-input">
-                                <span>Согласен с <a href="#">политикой <br> конфиденциальности</a></span>
+                                <span>Согласен с <a href="./documents/politica-conf.docx" target="_blank">политикой <br> конфиденциальности</a></span>
                             </label>
                         </div>
 
@@ -913,7 +979,7 @@
         <!-- FORM -->
 
         <!-- DOCUMENTS -->
-        <section class="documents">
+        <!-- <section class="documents" id="documents">
             <div class="documents__container container">
                 <h2 class="documents__title">
                     сведения об образовательной <br> организации
@@ -968,7 +1034,6 @@
                         </div>
                     </li>
 
-                    <!-- ================== -->
                     <li class="documents__item">
                         <img src="./img/documents/doc.png" alt="Документ" class="documents__item-img" width="53"
                             height="74">
@@ -1017,7 +1082,6 @@
                         </div>
                     </li>
 
-                    <!-- ================== -->
                     <li class="documents__item">
                         <img src="./img/documents/doc.png" alt="Документ" class="documents__item-img" width="53"
                             height="74">
@@ -1069,7 +1133,7 @@
 
                 </ul>
             </div>
-        </section>
+        </section> -->
         <!-- DOCUMENTS -->
     </main>
     <!-- MAIN -->
@@ -1110,14 +1174,25 @@
 
             <div class="footer__icons">
                 <ul class="footer__list">
-                    <li class="footer__item"><a href="#" c
-                        
-                        lass="footer__link"><img src="./img/footer/max.svg"
-                                alt="Мессенджер МАКС"></a></li>
-                    <li class="footer__item"><a href="№" class="footer__link"><img src="./img/footer/vk.svg"
-                                alt="Мессенджер Вконтакте"></a></li>
-                    <li class="footer__item"><a href="№" class="footer__link"><img src="./img/footer/Telegram.svg"
-                                alt="Мессенджер Телеграм"></a></li>
+                    <li class="footer__item">
+                        <a href="https://t.me/+4sVVcg3BrUkyZjAy" class="footer__link" target="_blank">
+                            <div class="footer__item-white"></div>
+                            <img src="./img/footer/Telegram.svg" alt="Мессенджер Телеграм">
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://max.ru/join/KoRh7GnI1sQrUC0wV01pDIU-P9TDKD60u9Sc26pRO6U" class="footer__link"
+                            target="_blank">
+                            <img src="./img/footer/max.svg" alt="Мессенджер МАКС">
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://vk.com/club236747807" class="footer__link" target="_blank">
+                            <div class="footer__item-white"></div>
+                            <img src="./img/footer/vk.svg" alt="Мессенджер Вконтакте">
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -1176,6 +1251,53 @@
         });
     </script>
     <script src="./script/scroll.js"></script>
+    <script>
+        const fab = document.getElementById('fab');
+        const burger = document.getElementById('burger');
+        const menu = document.getElementById('menu');
+
+        const SCROLL_TRIGGER = 200;
+
+        // Появление FAB
+        window.addEventListener('scroll', () => {
+            const isVisible = window.scrollY > SCROLL_TRIGGER;
+
+            fab.classList.toggle('visible', isVisible);
+
+            // если FAB исчез — закрываем меню
+            if (!isVisible) {
+                menu.classList.remove('open');
+            }
+        });
+
+        // Клик по бургеру
+        burger.addEventListener('click', () => {
+            // не даём открыть, если FAB скрыт
+            if (!fab.classList.contains('visible')) return;
+
+            menu.classList.toggle('open');
+        });
+
+        const links = document.querySelectorAll('.side-menu a');
+
+        function setActiveLink() {
+            const hash = window.location.hash;
+
+            links.forEach(link => {
+                link.classList.remove('active');
+
+                if (link.getAttribute('href') === hash) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // при изменении якоря (самое главное)
+        window.addEventListener('hashchange', setActiveLink);
+
+        // при загрузке
+        window.addEventListener('load', setActiveLink);
+    </script>
     <!-- SCRIPT -->
 
 </body>

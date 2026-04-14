@@ -1,0 +1,71 @@
+/* ===== FAB (круг) ===== */
+.fab {
+  position: fixed;
+  right: 20px;
+  top: 10%;
+  transform: translateY(-50%) scale(0);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.fab.visible {
+  transform: translateY(-50%) scale(1);
+  opacity: 1;
+}
+
+/* ===== КНОПКА ===== */
+.burger {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-blue);
+  color: var(--color-light);
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== МЕНЮ ===== */
+.side-menu {
+  position: fixed;
+  top: 10%;
+  right: 0; /* отступ от FAB */
+  
+  transform: translateY(-50%) translateX(40px);
+  opacity: 0;
+  
+  pointer-events: none;
+  transition: all 0.3s ease;
+
+  background: var(--color-light);
+  padding: 20px 30px;
+  border-radius: 30px;
+  display: flex;
+  gap: 20px;
+
+  z-index: 999;
+  width: 100%;
+}
+
+.side-menu.open {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== ССЫЛКИ ===== */
+.side-menu a {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.side-menu a:hover {
+  background: #3fc1c9;
+  color: white;
+}

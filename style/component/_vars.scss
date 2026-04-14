@@ -28,6 +28,8 @@
 	// director
 	--color-bg-director: linear-gradient(180deg, #e7f3f8 0%, #c3ecfd 26.92%, #b2e8ff 53.37%, #c3ecfd 71.63%, #e7f3f8 100%);
 	--color-content-director: linear-gradient(269deg, rgb(255, 255, 255) 80%, #0073a9 100%);
+	--color-content-director-mobile: linear-gradient(269deg, rgb(255, 255, 255) 80%, #A9E0FF 100%);
+	--color-director-info: linear-gradient(269deg, rgb(255, 255, 255) 80%, #ffffff00 100%);
 	//advantages
 	--color-bg-advantages: linear-gradient(180deg, #e7f3f8 0%, #b7e9fe 34.48%, #e7f3f8 69.55%);
 	// accordion-section
@@ -97,7 +99,9 @@
 	--color-bg-right: rgba(0, 62, 91, 0.54);
 	// director
 	--color-bg-director:  linear-gradient(360deg, #004566 33.17%, rgba(169, 224, 255, 0.62) 100%);
-	--color-content-director:  linear-gradient(270deg, #004566 85%, rgba(242, 251, 255, 0.76) 100%);
+	--color-content-director:  linear-gradient(270deg, #004566 69%, rgba(242, 251, 255, 0.76) 119%);
+	--color-content-director-mobile: linear-gradient(269deg, #004566 80%, #004566 100%);
+	--color-director-info: linear-gradient(269deg, #004566 80%, #ffffff00 100%);
 	//advantages
 	--color-bg-advantages: linear-gradient(180deg, #004566 0%);;
 	// accordion-section

@@ -3,6 +3,7 @@
     padding-bottom: 70px;
     background: var(--color-bg-director);
     position: relative;
+    overflow: hidden;
 
     &__img-bg {
         position: absolute;
@@ -18,24 +19,53 @@
         position: relative;
         border-radius: 85px;
         box-shadow: 11px 13px 21px 0 rgba(0, 0, 0, 0.1);
-        text-align: center;
-        padding-top: 25px;
-        padding-bottom: 365px;
+        // text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 150px;
+        padding-right: 58px;
         background: var(--color-content-director);
-        margin-left: 300px;
+        margin-left: 200px;
+        z-index: 10;
 
+        border: 2px solid var(--border-doc-border);
+        
         @include mobile {
-            margin-left: 100px;
+            margin-left: 0px;
+            padding-left: 20px;
+            background: var(--color-content-director-mobile);
+            border-radius: 0 85px 0 0;
+
         }
     }
 
+    &__info {
+        line-height: 94%;
+        @include fluid-text(26, 10);
+        // max-width: 830px;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 10;
+
+        @include mobile {
+            max-width: 350px;
+        }
+
+        p {
+            @include mobile {
+                background: var(--color-director-info);
+                border-radius: 10px;
+            }
+        }
+    }
 
     &__text {
         position: relative;
+        z-index: 10;
 
         @include mobile {
             position: absolute;
-            bottom: 0;
+            bottom: -5%;
             left: 0;
             border-radius: 12px;
             padding: 15px 9px;
@@ -43,20 +73,23 @@
             background: var(--color-light);
             display: block;
             width: 100%;
+            text-align: center;
+                border: 2px solid var(--border-doc-border);
         }
+
+
     }
 
     &__title {
         font-family: var(--trial-bold);
-        text-transform: uppercase;
-        @include fluid-text(30, 10);
-        line-height: 120%;
+        @include fluid-text(24, 8);
+        line-height: 110%;
         color: var(--color-blue);
     }
 
     &__name {
-        font-family: var(--font-family-regular);
-        @include fluid-text(36, 23);
+        font-family: var(--trial-bold);
+        @include fluid-text(40, 17);
         color: var(--color-dark);
         text-transform: capitalize;
     }
@@ -64,10 +97,15 @@
     &__img-human {
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 0%;
+        // transform: translate(-50%, -50%);
         width: 100%;
         height: auto;
+        z-index: 6;
+
+        @include mobile {
+            left: 90%;
+        }
 
         & img:nth-child(1) {
             position: absolute;
