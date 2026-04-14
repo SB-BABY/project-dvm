@@ -1456,6 +1456,7 @@ h4,
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
+  justify-content: space-between;
 }
 .form__button {
   background: #4cc3d9;
@@ -1470,6 +1471,12 @@ h4,
 .form__button:hover {
   background: #2ea8c0;
 }
+.form__political {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
 .form__checkbox {
   display: flex;
   align-items: center;
@@ -1478,6 +1485,38 @@ h4,
 }
 .form__checkbox input {
   cursor: pointer;
+}
+
+.checbox-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: var(--color-light);
+  border: 2px solid var(--color-blue);
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.checbox-input::after {
+  content: "✔";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  font-size: 26px;
+  overflow: hidden;
+  transition: 0.5s;
+  color: var(--color-light);
+}
+.checbox-input:checked::after {
+  width: 30px;
+  height: 30px;
+  background: var(--color-blue);
+  border-radius: 5px;
 }
 
 /* Адаптив */
@@ -1700,6 +1739,17 @@ h4,
 .footer__link img {
   width: clamp(32px, 3.125vw, 45px);
   height: clamp(32px, 3.125vw, 45px);
+  position: relative;
+}
+.footer__link img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: #fff;
 }
 
 .scroll-top {

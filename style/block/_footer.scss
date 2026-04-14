@@ -98,9 +98,27 @@
         align-items: center;
     }
 
+    &__item {
+        // height: 10px;
+        // width: 10px;
+        // background-color: #fff
+    }
+
     &__link {
         & img {
             @include fluid-block(45, 32);
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translate(-50%, -50%);
+                
+                width: 20px;
+                height: 20px;
+                background: #fff;
+            }
         }
     }
 }
