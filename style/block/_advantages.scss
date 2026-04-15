@@ -44,6 +44,11 @@
         overflow: hidden;
         min-height: 190px;
         border: 2px solid var(--border-doc-border);
+        transition: all 0.3s ease;
+        &:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
 
         @include mobile {
             min-height: auto;

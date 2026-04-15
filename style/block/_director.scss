@@ -48,7 +48,13 @@
         z-index: 10;
 
         @include mobile {
-            max-width: 350px;
+            // max-width: 350px;
+            // @include fluid-width(350, 240)
+            max-width: 30em;
+        }
+
+        @include mobile-s{
+            max-width: 20em;
         }
 
         p {

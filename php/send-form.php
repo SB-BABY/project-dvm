@@ -46,10 +46,10 @@ $message .= "Дата: $date";
    Email
 ------------------- */
 
-$to = "EatDucks@yandex.ru";   // сюда приходит заявка
+$to = "crkteam@yandex.ru";   // сюда приходит заявка
 $subject = "Новая заявка с сайта";
 
-$headers = "From: site@manus13.ru\r\n";
+$headers = "From: site@crk.agency-innovation.com\r\n";
 $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
 
 $mail = mail($to, $subject, $message, $headers);
