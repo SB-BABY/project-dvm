@@ -51,9 +51,12 @@
         padding: 28px 32px;
         color: var(--color-black);
         max-width: 520px;
-        min-width: 420px;
         position: relative;
         z-index: 10;
+
+        @include mobile-above {
+            min-width: 420px;
+        }
 
         @include mobile {
             min-height: auto;

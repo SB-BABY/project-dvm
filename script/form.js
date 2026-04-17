@@ -20,37 +20,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
             digits = digits.substring(0, 11);
 
-            let result = '+7';
-
-            if (digits.length > 1) {
-                result += ' (' + digits.substring(1, 4);
-            }
-
-            if (digits.length >= 4) {
-                result += ') ' + digits.substring(4, 7);
-            }
-
-            if (digits.length >= 7) {
-                result += '-' + digits.substring(7, 9);
-            }
-
-            if (digits.length >= 9) {
-                result += '-' + digits.substring(9, 11);
-            }
-
-            return result;
+            return "+" + digits;
         }
 
         if (phoneInput) {
-            phoneInput.addEventListener('input', () => {
+
+            phoneInput.addEventListener("input", () => {
                 phoneInput.value = formatPhone(phoneInput.value);
             });
 
-            phoneInput.addEventListener('blur', () => {
+            phoneInput.addEventListener("blur", () => {
                 phoneInput.value = formatPhone(phoneInput.value);
             });
 
-            phoneInput.addEventListener('paste', () => {
+            phoneInput.addEventListener("paste", () => {
                 setTimeout(() => {
                     phoneInput.value = formatPhone(phoneInput.value);
                 }, 0);
@@ -61,10 +44,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
             e.preventDefault();
 
-            const honeypot1 = form.querySelector('input[name="website"]')?.value;
-            const honeypot2 = form.querySelector('input[name="company_name"]')?.value;
+            const honeypot1 = form.querySelector('input[name="qwerty123"]')?.value;
+            const honeypot2 = form.querySelector('input[name="123qwerty"]')?.value;
 
             if (honeypot1 || honeypot2) return;
+
+            if (phoneInput) {
+                phoneInput.value = formatPhone(phoneInput.value);
+            }
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
 
             const formData = new FormData(form);
 
@@ -75,17 +67,25 @@ document.addEventListener("DOMContentLoaded", () => {
                     body: formData
                 });
 
-                const result = await response.json();
+                const text = await response.text();
+
+                let result;
+
+                try {
+                    result = JSON.parse(text);
+                } catch {
+                    throw new Error("Invalid JSON");
+                }
 
                 if (result.success) {
 
                     alert("Заявка успешно отправлена!");
                     form.reset();
 
-                    // 🔥 автозакрытие модалки
                     const modal = form.closest(".modal");
                     if (modal) {
                         modal.classList.remove("active");
+                        document.body.classList.remove("modal-open");
                     }
 
                 } else {
@@ -94,11 +94,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
             } catch (error) {
                 alert("Ошибка соединения");
+                console.error(error);
             }
 
         });
 
     });
+
+    
 
 
     /* -------------------
@@ -120,22 +123,18 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.remove("modal-open");
     }
 
-    // открыть
     openBtn.forEach(btn => {
         btn.addEventListener("click", openModal);
     });
 
-    // закрыть кнопкой
     if (closeBtn) {
         closeBtn.addEventListener("click", closeModal);
     }
 
-    // закрыть по overlay
     if (overlay) {
         overlay.addEventListener("click", closeModal);
     }
 
-    // 🔥 закрытие по ESC
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && modal.classList.contains("active")) {
             closeModal();

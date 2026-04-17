@@ -15,38 +15,52 @@ $(document).ready(function () {
                 breakpoint: 768,
                 settings: {
                     arrows: false,
-            },
+                },
             },
         ],
     });
 
-$(".documents__list").slick({
-    dots: false,
-    arrows: true,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 3,
-    rows: 2,
-    slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 150000,
-    pauseOnHover: true,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
+    $('.slider__list').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        speed: 500,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
+        centerMode: true,
+        centerPadding: '0px',
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),
+        arrows: true,
+    });
+
+    $(".documents__list").slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 600,
+        slidesToShow: 3,
+        rows: 2,
+        slidesToScroll: 1,
+        // autoplay: true,
+        // autoplaySpeed: 150000,
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                },
             },
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1.5,
-                vertical: true,
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1.5,
+                    vertical: true,
+                },
             },
-        },
-    ],
-});
+        ],
+    });
 
 
 });

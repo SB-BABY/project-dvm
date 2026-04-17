@@ -56,8 +56,6 @@
     &__icon {
         border-radius: 100%;
         background: var(--color-gray-light);
-        // width: 45px;
-        // height: 45px;
         position: relative;
 
         @include fluid-block(45, 25);
@@ -67,5 +65,42 @@
 
             @include fluid-block(18, 8);
         }
+    }
+
+    &__phone {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &__phone-number {
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        transform: translate(20px, -50%);
+        @include fluid-text(16, 6);
+        white-space: nowrap;
+        background: var(--color-gray-light);
+        padding: 8px 12px;
+        border-radius: 20px;
+
+        opacity: 0;
+        pointer-events: none;
+
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+
+    &__icon-phone {
+        cursor: pointer;
+        z-index: 2;
+        border-color: transparent;
+    }
+
+    /* активное состояние */
+    &__phone.active .header__phone-number {
+        opacity: 1;
+        transform: translate(-10px, -50%);
+        pointer-events: auto;
     }
 }

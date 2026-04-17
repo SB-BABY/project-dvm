@@ -15,7 +15,7 @@
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <!-- SLIDER -->
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.min.css?v=2.2">
     <!-- CSS -->
     <title>Центр комплексного развития компетенций</title>
 </head>
@@ -35,13 +35,24 @@
             <nav class="header__nav">
                 <ul class="header__lists">
                     <li class="header__item"><a href="#about" class="header__link">О нас</a></li>
+                    <li class="header__item"><a href="#advantages" class="header__link">Преимущества</a></li>
                     <li class="header__item"><a href="#accordion" class="header__link">Программы</a></li>
-                    <!-- <li class="header__item"><a href="" class="header__link">Кейсы</a></li>
-                    <li class="header__item"><a href="#documents" class="header__link">Сведения</a></li> -->
+                    <li class="header__item"><a href="" class="header__link">Кейсы</a></li>
                 </ul>
             </nav>
 
             <div class="header__icons">
+
+                <div class="header__phone">
+                    <a href="tel:+79220769999" class="header__phone-number">
+                        +7 922 076 9999
+                    </a>
+
+                    <button class="header__icon header__icon-phone">
+                        <img src="./img/header/phone.svg" alt="Позвонить">
+                    </button>
+                </div>
+
                 <a href="#" class="header__icon-blind header__icon theme-toggle">
                     <img src="./img/header/eye.svg" alt="Версия для слепых">
                 </a>
@@ -67,14 +78,91 @@
     <main class="main">
         <!-- BURGER -->
         <div id="fab" class="fab">
-            <button id="burger" class="burger">☰</button>
+            <!-- <button id="burger" class="burger">☰</button> -->
         </div>
 
         <div id="menu" class="side-menu">
-            <a href="#about">О нас</a>
-            <a href="#accordion">Программы</a>
-            <!-- <a href="#">Кейсы</a>
-            <a href="#documents">Сведения</a> -->
+            <div class="side-menu__container container">
+                <div class="side-menu__content">
+                    <a href="javascript:location.reload();" class="side-menu__logo">
+                        <img src="./img/header/logo.svg" alt="Логотип" width="56px" height="56px"
+                            class="side-menu__logo-img">
+                        <span class="side-menu__logo-text hidden-mobile">Центр <br> комплексного <br> развития <br>
+                            компетенций</span>
+                    </a>
+
+                    <nav class="side-menu__nav hidden-mobile">
+                        <a href="#about">О нас</a>
+                        <a href="#advantages">Преимущества</a>
+                        <a href="#accordion">Программы</a>
+                        <a href="#">Кейсы</a>
+                    </nav>
+
+                    <div class="side-menu__icons hidden-mobile">
+
+                        <div class="header__phone">
+                            <a href="tel:+79220769999" class="header__phone-number">
+                                +7 922 076 9999
+                            </a>
+
+                            <button class="header__icon header__icon-phone">
+                                <img src="./img/header/phone.svg" alt="Позвонить">
+                            </button>
+                        </div>
+
+                        <a href="https://t.me/+4sVVcg3BrUkyZjAy" class="header__icon-telega header__icon"
+                            target="_blank">
+                            <img src="./img/header/telega.svg" alt="Ссылка на телеграм">
+                        </a>
+
+                        <a href="https://max.ru/join/KoRh7GnI1sQrUC0wV01pDIU-P9TDKD60u9Sc26pRO6U"
+                            class="header__icon-max header__icon" target="_blank">
+                            <img src="./img/header/max.svg" alt="Ссылка на Макс">
+                        </a>
+
+                        <a href="https://vk.com/club236747807" class="header__icon-vk header__icon" target="_blank">
+                            <img src="./img/header/vk.svg" alt="Ссылка на Вконтакте">
+                        </a>
+                    </div>
+
+                    <div class="side-menu__bottom visible-mobile">
+                        <nav class="side-menu__nav">
+                            <a href="#about">О нас</a>
+                            <a href="#advantages">Преимущества</a>
+                            <a href="#accordion">Программы</a>
+                            <a href="#">Кейсы</a>
+                        </nav>
+
+                        <div class="side-menu__icons">
+
+                            <div class="header__phone">
+                                <a href="tel:+79220769999" class="header__phone-number">
+                                    +7 922 076 9999
+                                </a>
+
+                                <button class="header__icon header__icon-phone">
+                                    <img src="./img/header/phone.svg" alt="Позвонить">
+                                </button>
+                            </div>
+
+                            <a href="https://t.me/+4sVVcg3BrUkyZjAy" class="header__icon-telega header__icon"
+                                target="_blank">
+                                <img src="./img/header/telega.svg" alt="Ссылка на телеграм">
+                            </a>
+
+                            <a href="https://max.ru/join/KoRh7GnI1sQrUC0wV01pDIU-P9TDKD60u9Sc26pRO6U"
+                                class="header__icon-max header__icon" target="_blank">
+                                <img src="./img/header/max.svg" alt="Ссылка на Макс">
+                            </a>
+
+                            <a href="https://vk.com/club236747807" class="header__icon-vk header__icon" target="_blank">
+                                <img src="./img/header/vk.svg" alt="Ссылка на Вконтакте">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
         <!-- BURGER -->
 
@@ -100,23 +188,23 @@
                 <div class="hero__right">
                     <div class="hero__list">
                         <div class="hero__item">
-                            <img src="./img/hero/1.png" alt="Изображение один" class="hero__item-img">
+                            <img src="./img/hero/1.jpg" alt="Изображение один" class="hero__item-img">
                         </div>
 
                         <div class="hero__item">
-                            <img src="./img/hero/2.png" alt="Изображение один" class="hero__item-img">
+                            <img src="./img/hero/2.jpg" alt="Изображение один" class="hero__item-img">
                         </div>
 
                         <div class="hero__item">
-                            <img src="./img/hero/3.png" alt="Изображение один" class="hero__item-img">
+                            <img src="./img/hero/3.jpg" alt="Изображение один" class="hero__item-img">
                         </div>
 
                         <div class="hero__item">
-                            <img src="./img/hero/4.png" alt="Изображение один" class="hero__item-img">
+                            <img src="./img/hero/4.jpg" alt="Изображение один" class="hero__item-img">
                         </div>
 
                         <div class="hero__item">
-                            <img src="./img/hero/5.png" alt="Изображение один" class="hero__item-img">
+                            <img src="./img/hero/5.jpg" alt="Изображение один" class="hero__item-img">
                         </div>
                     </div>
                 </div>
@@ -839,7 +927,10 @@
         <!-- SLIDER -->
         <!-- <section class="slider">
             <div class="slider__container container">
+                <div class="prev"></div>
+                <div class="next"></div>
                 <ul class="slider__list">
+
                     <li class="slider__item">
                         <h3 class="slider__item-title">
                             Заголовок
@@ -900,30 +991,32 @@
 
                     <!-- honeypot антиспам -->
                     <div class="form__honeypot">
-                        <input type="text" name="website">
-                        <input type="text" name="company_name">
+
+                        <input type="text" name="qwerty123" autocomplete="off">
+                        <input type="text" name="123qwerty" autocomplete="off">
                     </div>
 
                     <div class="form__grid">
 
                         <div class="form__group">
-                            <input type="text" name="name" placeholder="Ваше имя" required>
+                            <input type="text" name="name" placeholder="Ваше имя" autocomplete="name" required>
                             <span class="form__error"></span>
                         </div>
 
                         <div class="form__group">
-                            <input type="tel" name="phone" placeholder="Номер телефона" maxlength="18"
+                            <input type="tel" name="phone" placeholder="Номер телефона" maxlength="12"
                                 autocomplete="tel" inputmode="tel" required>
                             <span class="form__error"></span>
                         </div>
 
                         <div class="form__group">
-                            <input type="text" name="company" placeholder="Название организации" required>
+                            <input type="text" name="company" placeholder="Название организации"
+                                autocomplete="organization" required>
                             <span class="form__error"></span>
                         </div>
 
                         <div class="form__group">
-                            <input type="email" name="email" placeholder="Почта" required>
+                            <input type="email" name="email" placeholder="Почта" autocomplete="email" required>
                             <span class="form__error"></span>
                         </div>
 
@@ -962,13 +1055,13 @@
 
                         <div class="form__political">
                             <label class="form__checkbox">
-                                <input type="checkbox" required class="checbox-input">
+                                <input type="checkbox" name="agree_data" required class="checbox-input">
                                 <span>Даю согласие на сбор <br> <a href="./documents/pers-dan.docx"
                                         target="_blank">персональных данных</a></span>
                             </label>
 
                             <label class="form__checkbox">
-                                <input type="checkbox" required class="checbox-input">
+                                <input type="checkbox" name="agree_policy" required class="checbox-input">
                                 <span>Согласен с <a href="./documents/politica-conf.docx" target="_blank">политикой <br>
                                         конфиденциальности</a></span>
                             </label>
@@ -1157,22 +1250,22 @@
                     НАЧНИТЕ ОБУЧЕНИЕ В ЦЕНТРЕ РАЗВИТИЯ КОМПЕТЕНЦИЙ
                 </p>
 
-                <form class="form__body js-contact-form">
+                <form class="form__body js-contact-form" autocomplete="off">
 
                     <div class="form__honeypot">
-                        <input type="text" name="website">
-                        <input type="text" name="company_name">
+                        <input type="text" name="qwerty123" autocomplete="off">
+                        <input type="text" name="123qwerty" autocomplete="off">
                     </div>
 
                     <div class="form__grid">
 
                         <div class="form__group">
-                            <input type="text" name="name" placeholder="Ваше имя" required>
+                            <input type="text" name="name" placeholder="Ваше имя" autocomplete="name" required>
                             <span class="form__error"></span>
                         </div>
 
                         <div class="form__group">
-                            <input type="tel" name="phone" placeholder="Номер телефона" maxlength="18"
+                            <input type="tel" name="phone" placeholder="Номер телефона" maxlength="12"
                                 autocomplete="tel" inputmode="tel" required>
                             <span class="form__error"></span>
                         </div>
@@ -1317,7 +1410,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./script/accordion.js"></script>
     <script src="./script/slider.js"></script>
-    <script src="./script/form.js"></script>
+    <script src="./script/form.js?v2.3"></script>
     <script>
         const themeBtn = document.querySelector(".theme-toggle");
         const images = document.querySelectorAll(".theme-img");
@@ -1371,6 +1464,11 @@
 
             fab.classList.toggle('visible', isVisible);
 
+            // если FAB появился — открываем меню
+            if (isVisible && !menu.classList.contains('open')) {
+                menu.classList.add('open');
+            }
+
             // если FAB исчез — закрываем меню
             if (!isVisible) {
                 menu.classList.remove('open');
@@ -1405,6 +1503,7 @@
         // при загрузке
         window.addEventListener('load', setActiveLink);
     </script>
+    <script src="./script/phone.js"></script>
     <!-- SCRIPT -->
 
 </body>
