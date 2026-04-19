@@ -5,6 +5,10 @@
     padding-bottom: 10px;
 
     &__container {
+        position: relative;
+    }
+
+    &__content {
         background-color: var(--color-light);
         padding: 10px;
         border-radius: 400px;
@@ -83,6 +87,8 @@
         background: var(--color-gray-light);
         padding: 8px 12px;
         border-radius: 20px;
+        color: #000 !important;
+        font-family: var(--trial-demi-bold);
 
         opacity: 0;
         pointer-events: none;

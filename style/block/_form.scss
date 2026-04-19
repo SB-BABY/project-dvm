@@ -4,9 +4,14 @@
     margin-bottom: 60px;
 
     &__container {
+        position: relative;
+    }
+
+    &__content{
         border-radius: 24px;
         background: var(--color-light);
         padding: 23px 52px;
+        border: 2px solid var(--color-border-light);
     }
 
     &__title {
