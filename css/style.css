@@ -819,33 +819,43 @@ h4,
 }
 .header__phone-number {
   position: absolute;
-  right: 100%;
-  top: 50%;
-  transform: translate(20px, -50%);
-  font-size: clamp(6px, 1.1111111111vw, 16px);
+  top: calc(100% + 8px);
+  right: 50%;
+  transform: translateX(50%) translateY(-6px);
+  font-size: clamp(6px, 0.8333333333vw, 12px);
   white-space: nowrap;
   background: var(--color-gray-light);
-  padding: 8px 12px;
-  border-radius: 20px;
   color: #000 !important;
+  padding: 7px 14px;
+  border-radius: 20px;
   font-family: var(--trial-demi-bold);
+  border-color: var(--color-dark);
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s ease;
-  z-index: 1;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 100;
 }
-.header__icon-phone {
-  cursor: pointer;
-  z-index: 2;
-  border-color: transparent;
+.header__phone-number::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-bottom-color: var(--color-gray-light);
 }
 .header {
   /* активное состояние */
 }
 .header__phone.active .header__phone-number {
   opacity: 1;
-  transform: translate(-10px, -50%);
+  transform: translateX(50%) translateY(0);
   pointer-events: auto;
+}
+.header__icon-phone {
+  cursor: pointer;
+  z-index: 2;
+  border-color: transparent;
 }
 
 /* ===== FAB (круг) ===== */
@@ -880,7 +890,7 @@ h4,
 /* ===== МЕНЮ ===== */
 .side-menu {
   position: fixed;
-  top: 5%;
+  top: 10%;
   left: 0;
   /* отступ от FAB */
   transform: translateY(-50%) translateX(40px);
@@ -967,7 +977,7 @@ h4,
 .side-menu a {
   text-decoration: none;
   color: var(--color-dark);
-  font-size: clamp(10px, 1.1111111111vw, 16px);
+  font-size: clamp(8px, 1.1111111111vw, 16px);
   border-radius: 20px;
   transition: all 0.2s ease;
 }
@@ -1251,12 +1261,17 @@ h4,
   box-shadow: 11px 13px 21px 0 rgba(0, 0, 0, 0.1);
   padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 150px;
+  padding-left: 177px;
   padding-right: 58px;
   background: var(--color-content-director);
   margin-left: 200px;
   z-index: 10;
   border: 2px solid var(--border-doc-border);
+}
+@media (max-width: 1023px) {
+  .director__content {
+    padding-left: 150px;
+  }
 }
 @media (max-width: 767px) {
   .director__content {
@@ -1333,26 +1348,13 @@ h4,
     left: 90%;
   }
 }
-.director__img-human img:nth-child(1) {
+.director__img-human img {
   position: absolute;
   top: 45%;
   left: -5%;
   transform: translate(-50%, -50%);
-  width: clamp(269px, 28.9583333333vw, 417px);
-  height: clamp(404px, 43.4027777778vw, 625px);
-}
-.director__img-human .director__img-bubble {
-  position: absolute;
-  top: 50%;
-  left: -6%;
-  transform: translate(-50%, -32%);
-  width: 53%;
+  width: 54%;
   height: auto;
-}
-@media (max-width: 767px) {
-  .director__img-human .director__img-bubble {
-    display: none;
-  }
 }
 .director__img-circle {
   position: absolute;
