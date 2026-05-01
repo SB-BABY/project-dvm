@@ -43,7 +43,7 @@
     &__title {
         font-family: var(--trial-bold);
         text-transform: uppercase;
-        @include fluid-text(38, 30);
+        @include fluid-text(38, 24);
         line-height: 120%;
         color: var(--color-dark);
 

@@ -21,7 +21,7 @@
 
         & span {
             background: var(--color-form-title);
-            @include fluid-text(63, 24);
+            @include fluid-text(63, 15);
             line-height: 0;
             color: transparent;
             background-clip: text;
@@ -30,7 +30,7 @@
     }
 
     &__subtitle {
-        @include fluid-text(25, 15);
+        @include fluid-text(25, 12);
         text-transform: uppercase;
         font-family: var(--trial-bold);
         color: var(--color-blue);
@@ -195,10 +195,6 @@
 
         &__grid {
             grid-template-columns: 1fr;
-        }
-
-        &__title {
-            font-size: 26px;
         }
 
         &__bottom {

@@ -101,44 +101,84 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    
+
 
 
     /* -------------------
        МОДАЛКА
     ------------------- */
 
-    const modal = document.getElementById("modal");
-    const openBtn = document.querySelectorAll(".open-modal-btn");
-    const closeBtn = document.querySelector(".modal__close");
-    const overlay = document.querySelector(".modal__overlay");
+    // const modal = document.getElementById("modal");
+    // const openBtn = document.querySelectorAll(".open-modal-btn");
+    // const closeBtn = document.querySelector(".modal__close");
+    // const overlay = document.querySelector(".modal__overlay");
 
-    function openModal() {
-        modal.classList.add("active");
-        document.body.classList.add("modal-open");
-    }
+    // function openModal() {
+    //     modal.classList.add("active");
+    //     document.body.classList.add("modal-open");
+    // }
 
-    function closeModal() {
-        modal.classList.remove("active");
-        document.body.classList.remove("modal-open");
-    }
+    // function closeModal() {
+    //     modal.classList.remove("active");
+    //     document.body.classList.remove("modal-open");
+    // }
 
-    openBtn.forEach(btn => {
-        btn.addEventListener("click", openModal);
-    });
+    // openBtn.forEach(btn => {
+    //     btn.addEventListener("click", openModal);
+    // });
 
-    if (closeBtn) {
-        closeBtn.addEventListener("click", closeModal);
-    }
+    // if (closeBtn) {
+    //     closeBtn.addEventListener("click", closeModal);
+    // }
 
-    if (overlay) {
-        overlay.addEventListener("click", closeModal);
-    }
+    // if (overlay) {
+    //     overlay.addEventListener("click", closeModal);
+    // }
 
-    document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && modal.classList.contains("active")) {
-            closeModal();
-        }
+    // document.addEventListener("keydown", (e) => {
+    //     if (e.key === "Escape" && modal.classList.contains("active")) {
+    //         closeModal();
+    //     }
+    // });
+
+    const openButtons = document.querySelectorAll(".open-modal-btn");
+
+    openButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const modalId = btn.dataset.modal;
+            const modal = document.getElementById(modalId);
+
+            if (!modal) return;
+
+            modal.classList.add("active");
+            document.body.classList.add("modal-open");
+
+            const closeBtn = modal.querySelector(".modal__close");
+            const overlay = modal.querySelector(".modal__overlay");
+
+            function closeModal() {
+                modal.classList.remove("active");
+                document.body.classList.remove("modal-open");
+
+                document.removeEventListener("keydown", escHandler);
+            }
+
+            function escHandler(e) {
+                if (e.key === "Escape") {
+                    closeModal();
+                }
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener("click", closeModal);
+            }
+
+            if (overlay) {
+                overlay.addEventListener("click", closeModal);
+            }
+
+            document.addEventListener("keydown", escHandler);
+        });
     });
 
 });

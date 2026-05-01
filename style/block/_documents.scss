@@ -2,7 +2,7 @@
     margin-top: 30px;
     margin-bottom: 30px;
 
-    &__container {
+    &__content {
         background: var(--color-light);
         border: 1px solid rgba(255, 255, 255, 0.75);
         border-radius: 24px;
@@ -14,7 +14,7 @@
     &__title {
         font-family: var(--trial-bold);
         text-transform: uppercase;
-        @include fluid-text(38, 25);
+        @include fluid-text(38, 14);
         // max-width: 800px;
     }
 
@@ -60,7 +60,7 @@
         &-title {
             font-family: var(--trial-bold);
             text-transform: uppercase;
-            font-size: 16px;
+            @include fluid-text(16, 10);
         }
 
         &-link {
@@ -76,8 +76,8 @@
 
             & a {
                 font-weight: 400;
-                font-size: 16px;
-                line-height: 120%;
+                @include fluid-text(16, 10);
+                 line-height: 120%;
                 text-decoration: underline;
                 color: var(--color-gray-link);
             }
