@@ -6,7 +6,7 @@ header('Content-Type: application/json');
    Honeypot защита
 ------------------- */
 
-if (!empty($_POST['website']) || !empty($_POST['company_name'])) {
+if (!empty($_POST['qwerty123']) || !empty($_POST['123qwerty'])) {
 
     echo json_encode([
         "success" => false
@@ -34,12 +34,19 @@ $date = date("d.m.Y H:i");
 
 $message = "Новая заявка с сайта\n\n";
 
-$message .= "Имя: $name\n";
-$message .= "Телефон: $phone\n";
-$message .= "Email: $email\n";
-$message .= "Компания: $company\n";
-$message .= "Роль: $role\n";
-$message .= "Программа: $program\n\n";
+// Если пришёл только телефон (попап) — короткое письмо
+if ($phone && !$name && !$email) {
+    $message .= "Телефон: $phone\n";
+    $message .= "Источник: всплывающий попап\n\n";
+} else {
+    $message .= "Имя: $name\n";
+    $message .= "Телефон: $phone\n";
+    $message .= "Email: $email\n";
+    $message .= "Компания: $company\n";
+    $message .= "Роль: $role\n";
+    $message .= "Программа: $program\n\n";
+}
+
 $message .= "Дата: $date";
 
 /* -------------------
@@ -71,3 +78,28 @@ if ($mail) {
     ]);
 
 }
+
+/* -------------------
+   Google Sheets
+------------------- */
+
+$sheetsUrl = "https://script.google.com/macros/s/AKfycby1MTAsyIcAbprdc4Ts6Mu8RW-D3EFvW2pmWDk5YQ4UCstogVkLYMTnju4-IKn8vQA8ew/exec"; // твой URL
+
+$sheetsData = json_encode([
+    "date"    => $date,
+    "name"    => $name,
+    "phone"   => $phone,
+    "email"   => $email,
+    "company" => $company,
+    "role"    => $role,
+    "program" => $program,
+]);
+
+$ch = curl_init($sheetsUrl);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $sheetsData);
+curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // важно! Google делает редирект
+curl_exec($ch);
+curl_close($ch);

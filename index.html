@@ -15,7 +15,7 @@
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <!-- SLIDER -->
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css?v=2.7">
+    <link rel="stylesheet" href="css/style.min.css?v=2.10">
     <!-- CSS -->
     <title>Центр комплексного развития компетенций</title>
 </head>
@@ -40,6 +40,7 @@
                         <li class="header__item"><a href="#advantages" class="header__link">Преимущества</a></li>
                         <li class="header__item"><a href="#accordion" class="header__link">Программы</a></li>
                         <li class="header__item"><a href="#case" class="header__link">Кейсы</a></li>
+                        <li class="header__item"><a href="#documents" class="header__link">Документы</a></li>
                     </ul>
                 </nav>
 
@@ -99,6 +100,7 @@
                         <a href="#advantages">Преимущества</a>
                         <a href="#accordion">Программы</a>
                         <a href="#case">Кейсы</a>
+                        <a href="#documents">Документы</a>
                     </nav>
 
                     <div class="side-menu__icons hidden-mobile">
@@ -134,6 +136,7 @@
                             <a href="#advantages">Преимущества</a>
                             <a href="#accordion">Программы</a>
                             <a href="#case">Кейсы</a>
+                            <a href="#documents">Документы</a>
                         </nav>
 
                         <div class="side-menu__icons">
@@ -1583,6 +1586,75 @@
             </div>
         </div>
         <!-- МОДАЛКА СЛАЙДЕР -->
+
+        <div class="modal" id="modal-5">
+
+            <div class="modal__overlay"></div>
+
+            <div class="container modal__container">
+                <div class="modal__content popup__content">
+
+                    <button class="modal__close">&times;</button>
+
+                    <div class="popup__bg">
+                        <img src="./img/popup/group-bg.svg" alt="фоновое изображение" class="popup__bg-img hidden-mobile">
+
+                    </div>
+
+                    <h2 class="popup__title">
+                        Первый шаг<br>
+                        <span>60-минутная диагностика с методологом</span>
+                    </h2>
+
+
+                    <p class="popup__text">
+                        Заходим в команду на 1-2 месяца - и делаем<br>
+                        результат
+                    </p>
+
+                    <form class="form__body js-contact-form popup__body" autocomplete="off">
+
+                        <div class="form__honeypot">
+                            <input type="text" name="qwerty123" autocomplete="off">
+                            <input type="text" name="123qwerty" autocomplete="off">
+                        </div>
+
+                        <div class="form__grid popup__grid">
+
+                            <div class="form__group popup__group">
+                                <input type="tel" name="phone" placeholder="Номер телефона" maxlength="12"
+                                    autocomplete="tel" inputmode="tel" required>
+                                <span class="form__error"></span>
+                            </div>
+
+                            <button type="submit" class="popup__btn">
+                                Получить разбор бизнеса
+                            </button>
+
+
+                        </div>
+
+                        <div class="form__bottom">
+
+
+
+                            <div class="form__political">
+                                <label class="form__checkbox">
+                                    <input type="checkbox" required class="checbox-input">
+                                    <span>Даю согласие на обработку <a href="./documents/pers-dan.docx"
+                                            target="_blank">персональных данных</a></span>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
     </main>
     <!-- MAIN -->
 
@@ -1658,7 +1730,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./script/accordion.js"></script>
     <script src="./script/slider.js?v2.2"></script>
-    <script src="./script/form.js?v2.5"></script>
+    <script src="./script/form.js?v2.8"></script>
     <script>
         const themeBtn = document.querySelector(".theme-toggle");
         const images = document.querySelectorAll(".theme-img");

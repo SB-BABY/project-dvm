@@ -58,6 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
+            // Блокируем кнопку
+            const submitBtn = form.querySelector('[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Отправка...";
+
             const formData = new FormData(form);
 
             try {
@@ -90,11 +95,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 } else {
                     alert("Ошибка отправки");
+                    // Разблокируем если ошибка
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Оставить заявку";
                 }
 
             } catch (error) {
                 alert("Ошибка соединения");
                 console.error(error);
+                // Разблокируем если ошибка
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Оставить заявку";
             }
 
         });
@@ -180,5 +191,72 @@ document.addEventListener("DOMContentLoaded", () => {
             document.addEventListener("keydown", escHandler);
         });
     });
+
+    // POPUP
+    // попап с хранением в сесии
+    // const popupShownKey = "popup_modal5_shown";
+
+    // if (!sessionStorage.getItem(popupShownKey)) {
+    //     setTimeout(() => {
+    //         const modal5 = document.getElementById("modal-5");
+    //         if (!modal5) return;
+
+    //         // Не показывать, если другая модалка открыта
+    //         if (document.body.classList.contains("modal-open")) return;
+
+    //         modal5.classList.add("active");
+    //         document.body.classList.add("modal-open");
+
+    //         sessionStorage.setItem(popupShownKey, "true");
+
+    //         const closeBtn = modal5.querySelector(".modal__close");
+    //         const overlay = modal5.querySelector(".modal__overlay");
+
+    //         function closeModal() {
+    //             modal5.classList.remove("active");
+    //             document.body.classList.remove("modal-open");
+    //             document.removeEventListener("keydown", escHandler);
+    //         }
+
+    //         function escHandler(e) {
+    //             if (e.key === "Escape") closeModal();
+    //         }
+
+    //         if (closeBtn) closeBtn.addEventListener("click", closeModal);
+    //         if (overlay) overlay.addEventListener("click", closeModal);
+    //         document.addEventListener("keydown", escHandler);
+
+    //     }, 1500);
+    // }
+
+    // попап без хранения в сесии
+    // POPUP
+    setTimeout(() => {
+        const modal5 = document.getElementById("modal-5");
+        if (!modal5) return;
+
+        if (document.body.classList.contains("modal-open")) return;
+
+        modal5.classList.add("active");
+        document.body.classList.add("modal-open");
+
+        const closeBtn = modal5.querySelector(".modal__close");
+        const overlay = modal5.querySelector(".modal__overlay");
+
+        function closeModal() {
+            modal5.classList.remove("active");
+            document.body.classList.remove("modal-open");
+            document.removeEventListener("keydown", escHandler);
+        }
+
+        function escHandler(e) {
+            if (e.key === "Escape") closeModal();
+        }
+
+        if (closeBtn) closeBtn.addEventListener("click", closeModal);
+        if (overlay) overlay.addEventListener("click", closeModal);
+        document.addEventListener("keydown", escHandler);
+
+    }, 15000);
 
 });
