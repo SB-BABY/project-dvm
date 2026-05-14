@@ -28,6 +28,21 @@ $program = $_POST['program'] ?? '';
 
 $date = date("d.m.Y H:i");
 
+$phone = preg_replace('/\D/', '', $_POST['phone'] ?? '');
+
+// Приводим к 11 цифрам с 7
+if (strlen($phone) === 10 && $phone[0] === '9') {
+    $phone = '7' . $phone;
+}
+
+if (strlen($phone) !== 11 || $phone[0] !== '7') {
+    echo json_encode(["success" => false, "error" => "invalid_phone"]);
+    exit;
+}
+
+// Форматируем обратно для письма
+$phone = '+' . $phone;
+
 /* -------------------
    Сообщение
 ------------------- */
