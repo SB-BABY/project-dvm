@@ -35,7 +35,7 @@
         />
         <!-- SLIDER -->
         <!-- CSS -->
-        <link rel="stylesheet" href="css/style.min.css?v=2.11" />
+        <link rel="stylesheet" href="css/style.min.css?v=2.13" />
         <!-- CSS -->
         <title>Корпоративный университет Агентства Инноваций</title>
     </head>
@@ -167,12 +167,24 @@
             <div id="menu" class="side-menu">
                 <div class="side-menu__container container">
                     <div class="side-menu__content">
-                        <a href="javascript:location.reload();" class="side-menu__logo hidden-mobile">
-                            <img src="./img/header/logo.svg" alt="Логотип" width="56px" height="56px"
-                                class="side-menu__logo-img">
-                            <span class="side-menu__logo-text hidden-mobile">Корпоративный <br> университет <br> Агентства <br>
-                                Инноваций</span>
-                         </a>
+                        <a
+                            href="javascript:location.reload();"
+                            class="side-menu__logo hidden-mobile"
+                        >
+                            <img
+                                src="./img/header/logo.svg"
+                                alt="Логотип"
+                                width="56px"
+                                height="56px"
+                                class="side-menu__logo-img"
+                            />
+                            <span class="side-menu__logo-text hidden-mobile"
+                                >Корпоративный <br />
+                                университет <br />
+                                Агентства <br />
+                                Инноваций</span
+                            >
+                        </a>
 
                         <nav class="side-menu__nav hidden-mobile">
                             <a href="#about">О нас</a>
@@ -2524,13 +2536,13 @@
 
                         <h2 class="popup__title">
                             Первый шаг<br />
-                            <span>60-минутная диагностика с методологом</span>
+                            <span>30-минутная диагностика с экспертом</span>
                         </h2>
 
-                        <p class="popup__text">
+                        <!-- <p class="popup__text">
                             Заходим в команду на 1-2 месяца - и делаем<br />
                             результат
-                        </p>
+                        </p> -->
 
                         <form
                             class="form__body js-contact-form popup__body"
@@ -2547,6 +2559,81 @@
                                     name="123qwerty"
                                     autocomplete="off"
                                 />
+                            </div>
+
+                            <div class="popup__radio">
+                                <label for="rdo-1" class="popup__radio-btn">
+                                    <input
+                                        type="radio"
+                                        id="rdo-1"
+                                        name="radio-grp"
+                                        value="Где в компании накапливается хаос"
+                                    />
+                                    <svg
+                                        width="20px"
+                                        height="20px"
+                                        viewBox="0 0 20 20"
+                                    >
+                                        <circle cx="10" cy="10" r="9"></circle>
+                                        <path
+                                            d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
+                                            class="inner"
+                                        ></path>
+                                        <path
+                                            d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z"
+                                            class="outer"
+                                        ></path>
+                                    </svg>
+                                    <span>Где в компании накапливается хаос</span>
+                                </label>
+                                <label for="rdo-2" class="popup__radio-btn">
+                                    <input
+                                        type="radio"
+                                        id="rdo-2"
+                                        name="radio-grp"
+                                        value="Выдержит ли текущая модель бизнеса ближайшие 3 года"
+                                    />
+                                    <svg
+                                        width="20px"
+                                        height="20px"
+                                        viewBox="0 0 20 20"
+                                    >
+                                        <circle cx="10" cy="10" r="9"></circle>
+                                        <path
+                                            d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
+                                            class="inner"
+                                        ></path>
+                                        <path
+                                            d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z"
+                                            class="outer"
+                                        ></path>
+                                    </svg>
+                                    <span>Выдержит ли текущая модель бизнеса ближайшие 3 года</span>
+                                </label>
+                                <label for="rdo-3" class="popup__radio-btn">
+                                    <input
+                                        type="radio"
+                                        id="rdo-3"
+                                        name="radio-grp"
+                                        value="Насколько система управления готова к дальнейшему росту"
+                                    />
+                                    <svg
+                                        width="20px"
+                                        height="20px"
+                                        viewBox="0 0 20 20"
+                                    >
+                                        <circle cx="10" cy="10" r="9"></circle>
+                                        <path
+                                            d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
+                                            class="inner"
+                                        ></path>
+                                        <path
+                                            d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z"
+                                            class="outer"
+                                        ></path>
+                                    </svg>
+                                    <span>Насколько система управления готова к дальнейшему росту</span>
+                                </label>
                             </div>
 
                             <div class="form__grid popup__grid">
@@ -2704,7 +2791,7 @@
         ></script>
         <script src="./script/accordion.js"></script>
         <script src="./script/slider.js?v2.2"></script>
-        <script src="./script/form.js?v2.9"></script>
+        <script src="./script/form.js?v2.10"></script>
         <script>
             const themeBtn = document.querySelector(".theme-toggle");
             const images = document.querySelectorAll(".theme-img");

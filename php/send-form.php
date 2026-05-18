@@ -25,6 +25,7 @@ $email = $_POST['email'] ?? '';
 $company = $_POST['company'] ?? '';
 $role = $_POST['role'] ?? '';
 $program = $_POST['program'] ?? '';
+$diagnostic = $_POST['diagnostic'] ?? '';
 
 $date = date("d.m.Y H:i");
 
@@ -52,6 +53,7 @@ $message = "Новая заявка с сайта\n\n";
 // Если пришёл только телефон (попап) — короткое письмо
 if ($phone && !$name && !$email) {
     $message .= "Телефон: $phone\n";
+    if ($diagnostic) $message .= "Тема диагностики: $diagnostic\n";
     $message .= "Источник: всплывающий попап\n\n";
 } else {
     $message .= "Имя: $name\n";
@@ -69,6 +71,7 @@ $message .= "Дата: $date";
 ------------------- */
 
 $to = "crkteam@yandex.ru";   // сюда приходит заявка
+// $to = "shirin.i.s@yandex.ru";   // сюда приходит заявка
 $subject = "Новая заявка с сайта";
 
 $headers = "From: site@crk.agency-innovation.com\r\n";
@@ -108,6 +111,7 @@ $sheetsData = json_encode([
     "company" => $company,
     "role"    => $role,
     "program" => $program,
+    "diagnostic" => $diagnostic,
 ]);
 
 $ch = curl_init($sheetsUrl);

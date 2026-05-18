@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     /* -------------------
        ФОРМЫ
     ------------------- */
@@ -14,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
         function applyMask(digits) {
             if (digits.startsWith("8")) digits = "7" + digits.slice(1);
             if (digits.startsWith("9")) digits = "7" + digits;
-            if (!digits.startsWith("7")) digits = "7" + digits.replace(/^7*/, "");
+            if (!digits.startsWith("7"))
+                digits = "7" + digits.replace(/^7*/, "");
             digits = digits.substring(0, 11);
 
             let result = "+7";
@@ -92,11 +92,30 @@ document.addEventListener("DOMContentLoaded", () => {
         form.addEventListener("submit", async function (e) {
             e.preventDefault();
 
-            const honeypot1 = form.querySelector('input[name="qwerty123"]')?.value;
-            const honeypot2 = form.querySelector('input[name="123qwerty"]')?.value;
+            const honeypot1 = form.querySelector(
+                'input[name="qwerty123"]',
+            )?.value;
+            const honeypot2 = form.querySelector(
+                'input[name="123qwerty"]',
+            )?.value;
             if (honeypot1 || honeypot2) return;
 
             const submitBtn = form.querySelector('[type="submit"]');
+
+            const selectedRadio = form.querySelector(
+                'input[name="radio-grp"]:checked',
+            );
+            if (!selectedRadio) {
+                const radioGroup = form.querySelector(".popup__radio");
+                if (radioGroup) {
+                    radioGroup.style.outline = "2px solid red";
+                    radioGroup.style.borderRadius = "8px";
+                    setTimeout(() => {
+                        radioGroup.style.outline = "";
+                    }, 3000);
+                }
+                return;
+            }
 
             if (phoneInput) {
                 const digits = phoneInput.value.replace(/\D/g, "");
@@ -130,6 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
             submitBtn.textContent = "Отправка...";
 
             const formData = new FormData(form);
+            formData.append("diagnostic", selectedRadio.value);
 
             try {
                 const response = await fetch("./php/send-form.php", {
@@ -231,7 +251,5 @@ document.addEventListener("DOMContentLoaded", () => {
         if (closeBtn) closeBtn.addEventListener("click", closeModal);
         if (overlay) overlay.addEventListener("click", closeModal);
         document.addEventListener("keydown", escHandler);
-
     }, 15000);
-
 });
