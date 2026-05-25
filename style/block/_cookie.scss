@@ -1,0 +1,313 @@
+// ====================================================
+//  Cookie Consent Modal — SCSS
+//  Компилируй: sass cookie-modal.scss cookie-modal.css
+// ====================================================
+
+// ── Токены
+$ck-bg: #ffffff;
+$ck-surface: #f8f7f4;
+$ck-border: #e8e5df;
+$ck-text: #1a1a1a;
+$ck-muted: #6b6560;
+$ck-accent: #2563eb; // синий — замени на цвет бренда
+$ck-accent-dark: #1d4ed8;
+$ck-danger: #dc2626;
+
+// ── Overlay
+.ck-overlay {
+    bottom: 0%;
+    left: 0%;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1.5rem;
+    //   background      : rgba(0,0,0,.35);
+    //   backdrop-filter : blur(4px);
+    //   -webkit-backdrop-filter: blur(4px);
+
+    // Анимация появления
+    animation: ckFadeIn 0.35s ease both;
+
+    @media (min-width: 640px) {
+        align-items: center;
+    }
+
+    &.ck-overlay--hidden {
+        animation: ckFadeOut 0.3s ease forwards;
+        pointer-events: none;
+    }
+}
+
+// ── Карточка
+.ck-modal {
+    background: var(--color-light);
+    border: 1px solid var(--color-border-light);
+    border-radius: 50px;
+    // box-shadow: $ck-shadow;
+    padding: 2rem 2rem 1.75rem;
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+
+    animation: ckSlideUp 0.35s cubic-bezier(0.2, 0.8, 0.4, 1) both;
+
+    @media (max-width: 479px) {
+        padding: 1.5rem 1.25rem 1.25rem;
+        border-radius: $ck-radius $ck-radius 12px 12px;
+    }
+}
+
+// ── Иконка
+.ck-icon {
+    color: $ck-accent;
+    margin-bottom: 0.75rem;
+
+    svg {
+        display: block;
+    }
+}
+
+// ── Заголовок
+.ck-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-dark);
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+// ── Текст
+.ck-text {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--color-dark);
+    margin: 0 0 1.25rem;
+
+}
+
+.ck-link {
+    color: var(--color-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);;
+
+    &:hover {
+        color: var(--color-dark);
+    }
+}
+
+// ── Настройки (тогглы)
+.ck-settings {
+    background: $ck-surface;
+    border: 1px solid $ck-border;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+    
+    flex-direction: column;
+    gap: 0.75rem;
+
+    // появление
+    &:not([hidden]) {
+        animation: ckSlideDown 0.25s ease both;
+        display: flex;
+    }
+}
+
+.ck-toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.ck-toggle-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.ck-toggle-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $ck-text;
+}
+
+.ck-toggle-desc {
+    font-size: 0.75rem;
+    color: $ck-muted;
+}
+
+// ── Toggle switch
+.ck-toggle {
+    position: relative;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    &--disabled {
+        cursor: default;
+        opacity: 0.65;
+    }
+}
+
+.ck-toggle-track {
+    display: block;
+    width: 44px;
+    height: 24px;
+    border-radius: 999px;
+    background: #d1cec9;
+    position: relative;
+    transition: background $ck-transition;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        transition: transform $ck-transition;
+    }
+}
+
+.ck-toggle input:checked ~ .ck-toggle-track {
+    background: $ck-accent;
+
+    &::after {
+        transform: translateX(20px);
+    }
+}
+
+// ── Кнопки
+.ck-actions {
+    display: flex;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media (max-width: 400px) {
+        flex-direction: column;
+
+        .ck-btn {
+            width: 100%;
+        }
+    }
+}
+
+.ck-btn {
+    flex: 1;
+    min-width: 0;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all $ck-transition;
+    border: 2px solid transparent;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 1;
+
+    &:focus-visible {
+        outline: 2px solid $ck-accent;
+        outline-offset: 3px;
+    }
+
+    // Настроить
+    &--ghost {
+        background: transparent;
+        border-color: transparent;
+        color: var(--color-dark);
+
+        &:hover {
+            background: $ck-surface;
+            color: $ck-text;
+        }
+    }
+
+    // Отклонить
+    &--outline {
+        background: transparent;
+        border-color: $ck-border;
+        color: var(--color-dark);
+
+        &:hover {
+            border-color: $ck-danger;
+            color: $ck-danger;
+        }
+    }
+
+    // Принять
+    &--primary {
+        background: var(--color-blue);
+        color: var(--color-light);;
+        border-color: var(--color-blue);
+
+        &:hover {
+            background: $ck-accent-dark;
+            border-color: $ck-accent-dark;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+// ── Keyframes
+@keyframes ckFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes ckFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes ckSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ckSlideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 200px;
+    }
+}

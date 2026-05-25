@@ -102,21 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const submitBtn = form.querySelector('[type="submit"]');
 
-            const selectedRadio = form.querySelector(
-                'input[name="radio-grp"]:checked',
-            );
-            if (!selectedRadio) {
-                const radioGroup = form.querySelector(".popup__radio");
-                if (radioGroup) {
-                    radioGroup.style.outline = "2px solid red";
-                    radioGroup.style.borderRadius = "8px";
-                    setTimeout(() => {
-                        radioGroup.style.outline = "";
-                    }, 3000);
-                }
-                return;
-            }
-
             if (phoneInput) {
                 const digits = phoneInput.value.replace(/\D/g, "");
                 if (digits.length !== 11) {
@@ -149,7 +134,26 @@ document.addEventListener("DOMContentLoaded", () => {
             submitBtn.textContent = "Отправка...";
 
             const formData = new FormData(form);
-            formData.append("diagnostic", selectedRadio.value);
+
+            /* --- Radio (только если есть в форме) --- */
+
+            const radioGroup = form.querySelector(".popup__radio");
+            if (radioGroup) {
+                const selectedRadio = form.querySelector(
+                    'input[name="radio-grp"]:checked',
+                );
+                if (!selectedRadio) {
+                    radioGroup.style.outline = "2px solid red";
+                    radioGroup.style.borderRadius = "8px";
+                    setTimeout(() => {
+                        radioGroup.style.outline = "";
+                    }, 3000);
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Оставить заявку";
+                    return;
+                }
+                formData.append("diagnostic", selectedRadio.value);
+            }
 
             try {
                 const response = await fetch("./php/send-form.php", {

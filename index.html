@@ -35,12 +35,13 @@
         />
         <!-- SLIDER -->
         <!-- CSS -->
-        <link rel="stylesheet" href="css/style.min.css?v=2.13" />
+        <link rel="stylesheet" href="css/style.min.css?v=2.14" />
         <!-- CSS -->
         <title>Корпоративный университет Агентства Инноваций</title>
     </head>
 
     <body>
+        
         <!-- HEADER -->
         <header class="header">
             <div class="container header__container">
@@ -1882,7 +1883,7 @@
                                             class="checbox-input"
                                         />
                                         <span
-                                            >Даю согласие на сбор <br />
+                                            >Даю согласие на обработку <br />
                                             <a
                                                 href="./documents/pers-dan.docx"
                                                 target="_blank"
@@ -1922,7 +1923,7 @@
                 <div class="documents__container container">
                     <div class="documents__content">
                         <h2 class="documents__title">
-                            сведения об образовательной <br />
+                            Официальные документы <br />
                             организации
                         </h2>
 
@@ -2310,7 +2311,7 @@
                                         class="checbox-input"
                                     />
                                     <span
-                                        >Даю согласие на сбор <br />
+                                        >Даю согласие на обработку <br />
                                         <a
                                             href="./documents/pers-dan.docx"
                                             target="_blank"
@@ -2584,7 +2585,9 @@
                                             class="outer"
                                         ></path>
                                     </svg>
-                                    <span>Где в компании накапливается хаос</span>
+                                    <span
+                                        >Где в компании накапливается хаос</span
+                                    >
                                 </label>
                                 <label for="rdo-2" class="popup__radio-btn">
                                     <input
@@ -2608,7 +2611,10 @@
                                             class="outer"
                                         ></path>
                                     </svg>
-                                    <span>Выдержит ли текущая модель бизнеса ближайшие 3 года</span>
+                                    <span
+                                        >Выдержит ли текущая модель бизнеса
+                                        ближайшие 3 года</span
+                                    >
                                 </label>
                                 <label for="rdo-3" class="popup__radio-btn">
                                     <input
@@ -2632,7 +2638,10 @@
                                             class="outer"
                                         ></path>
                                     </svg>
-                                    <span>Насколько система управления готова к дальнейшему росту</span>
+                                    <span
+                                        >Насколько система управления готова к
+                                        дальнейшему росту</span
+                                    >
                                 </label>
                             </div>
 
@@ -2678,6 +2687,84 @@
                     </div>
                 </div>
             </div>
+
+            <!-- COOKIE -->
+            <div
+                class="ck-overlay"
+                id="ckOverlay"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="ckTitle"
+            >
+                <div class="ck-modal">
+
+                    <h2 class="ck-title" id="ckTitle">
+                        Мы используем файлы cookie
+                    </h2>
+
+                    <p class="ck-text">
+                        Наш сайт использует cookie-файлы для аналитики,
+                        улучшения работы и персонализации контента, в том числе
+                        с помощью <strong>Яндекс.Метрики</strong>. Подробнее — в
+                        нашей
+                        <a
+                            href="./documents/cookie.pdf"
+                            target="_blank"
+                            rel="noopener"
+                            class="ck-link"
+                            >политике конфиденциальности</a
+                        >.
+                    </p>
+
+                    <!-- Настройки (разворачиваются) -->
+                    <div class="ck-settings" id="ckSettings" hidden>
+                        <div class="ck-toggle-row">
+                            <div class="ck-toggle-info">
+                                <span class="ck-toggle-label">Необходимые</span>
+                                <span class="ck-toggle-desc"
+                                    >Обеспечивают базовую работу сайта</span
+                                >
+                            </div>
+                            <label class="ck-toggle ck-toggle--disabled">
+                                <input type="checkbox" checked disabled />
+                                <span class="ck-toggle-track"></span>
+                            </label>
+                        </div>
+
+                        <div class="ck-toggle-row">
+                            <div class="ck-toggle-info">
+                                <span class="ck-toggle-label"
+                                    >Аналитические</span
+                                >
+                                <span class="ck-toggle-desc"
+                                    >Яндекс.Метрика, статистика посещений</span
+                                >
+                            </div>
+                            <label class="ck-toggle">
+                                <input
+                                    type="checkbox"
+                                    id="ckAnalytics"
+                                    checked
+                                />
+                                <span class="ck-toggle-track"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="ck-actions">
+                        <button class="ck-btn ck-btn--ghost" id="ckConfigure">
+                            Настроить
+                        </button>
+                        <button class="ck-btn ck-btn--outline" id="ckDecline">
+                            Отклонить
+                        </button>
+                        <button class="ck-btn ck-btn--primary" id="ckAccept">
+                            Принять все
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- COOKIE -->
         </main>
         <!-- MAIN -->
 
@@ -2791,7 +2878,7 @@
         ></script>
         <script src="./script/accordion.js"></script>
         <script src="./script/slider.js?v2.2"></script>
-        <script src="./script/form.js?v2.10"></script>
+        <script src="./script/form.js?v2.11"></script>
         <script>
             const themeBtn = document.querySelector(".theme-toggle");
             const images = document.querySelectorAll(".theme-img");
@@ -2885,5 +2972,59 @@
         </script>
         <script src="./script/phone.js?v2.0"></script>
         <!-- SCRIPT -->
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+            // Загружаем только тег.js, но НЕ инициализируем
+            (function (m, e, t, r, i, k, a) {
+                m[i] =
+                    m[i] ||
+                    function () {
+                        (m[i].a = m[i].a || []).push(arguments);
+                    };
+                m[i].l = 1 * new Date();
+                for (var j = 0; j < document.scripts.length; j++) {
+                    if (document.scripts[j].src === r) {
+                        return;
+                    }
+                }
+                ((k = e.createElement(t)),
+                    (a = e.getElementsByTagName(t)[0]),
+                    (k.async = 1),
+                    (k.src = r),
+                    a.parentNode.insertBefore(k, a));
+            })(
+                window,
+                document,
+                "script",
+                "https://mc.yandex.ru/metrika/tag.js",
+                "ym",
+            );
+
+            // Инициализация вынесена в функцию — вызывается только после согласия
+            window.initYandexMetrika = function () {
+                ym(108710508, "init", {
+                    ssr: true,
+                    webvisor: true,
+                    clickmap: true,
+                    ecommerce: "dataLayer",
+                    referrer: document.referrer,
+                    url: location.href,
+                    accurateTrackBounce: true,
+                    trackLinks: true,
+                });
+            };
+        </script>
+        <noscript
+            ><div>
+                <img
+                    src="https://mc.yandex.ru/watch/108710508"
+                    style="position: absolute; left: -9999px"
+                    alt=""
+                /></div
+        ></noscript>
+        <!-- /Yandex.Metrika counter -->
+         
+        <script src="./script/cookie.js?v1.1"></script>
     </body>
 </html>
