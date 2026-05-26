@@ -3,8 +3,8 @@
     const audio = document.getElementById('bgAudio');
     const icon  = document.getElementById('audioIcon');
 
-    const ICON_PLAY  = './img/director/pause.svg';
-    const ICON_PAUSE = './img/director/play.svg';
+    const ICON_PLAY  = './img/director/play.svg';
+    const ICON_PAUSE = './img/director/pause.svg';
 
     // ID блока, при прокрутке до которого появляется кнопка
     const TARGET_ID  = 'about'; // ← замени на нужный
