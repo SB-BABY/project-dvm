@@ -41,7 +41,24 @@
     </head>
 
     <body>
-        
+        <!-- GLASS -->
+        <svg style="display: none">
+            <filter id="displacementFilter">
+                <feImage
+                    href="data:image/png;base64,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"
+                    preserveAspectRatio="none"
+                />
+
+                <feDisplacementMap
+                    in="SourceGraphic"
+                    in2="turbulence"
+                    scale="600"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                />
+            </filter>
+        </svg>
+        <!-- GLASS -->
         <!-- HEADER -->
         <header class="header">
             <div class="container header__container">
@@ -397,38 +414,45 @@
                         class="about__bg"
                     />
 
-                    <div class="about__left">
-                        <img
-                            src="./img/about/decor-one.png"
-                            alt="Декоративное изобаржение"
-                            class="about__left-bg"
-                        />
+                    <div class="about__left bg-liquid-glass">
+                        <div class="about__left-content">
+                            <img
+                                src="./img/about/decor-one.png"
+                                alt="Декоративное изобаржение"
+                                class="about__left-bg"
+                            />
 
-                        <h2 class="about__title">О нас</h2>
+                            <h2 class="about__title">О нас</h2>
 
-                        <p class="about__text">
-                            Корпоративный университет Агентства Инноваций —
-                            пространство для нового поколения руководителей,
-                            которые ведут за собой команды.
-                        </p>
+                            <p class="about__text">
+                                Корпоративный университет Агентства Инноваций —
+                                пространство для нового поколения руководителей,
+                                которые ведут за собой команды.
+                            </p>
 
-                        <p class="about__text-little">
-                            Мы верим, что обучение не может быть формальным. Тем
-                            более для тех, кто уже несёт ответственность за
-                            команды, продукты и смыслы.
-                        </p>
+                            <p class="about__text-little">
+                                Мы верим, что обучение не может быть формальным.
+                                Тем более для тех, кто уже несёт ответственность
+                                за команды, продукты и смыслы.
+                            </p>
 
-                        <p class="about__text-little">
-                            Мы создаём программы, в которых сочетаются
-                            профессиональные и универсальные навыки,
-                            ориентируясь на реальные вызовы отрасли, страны и
-                            будущего.
-                        </p>
+                            <p class="about__text-little">
+                                Мы создаём программы, в которых сочетаются
+                                профессиональные и универсальные навыки,
+                                ориентируясь на реальные вызовы отрасли, страны
+                                и будущего.
+                            </p>
+                        </div>
                     </div>
 
                     <div class="about__right">
                         <ul class="about__list js-accordion">
                             <li class="about__item js-accordion-item">
+                                <img
+                                    src="./img/about/bg-acc-one.png"
+                                    alt="фоновое изображение"
+                                    class="about__item-bg"
+                                />
                                 <div class="about__item-left">
                                     <div
                                         class="about__arrow js-accordion-arrow"
@@ -538,6 +562,11 @@
                             </li>
 
                             <li class="about__item js-accordion-item">
+                                <img
+                                    src="./img/about/bg-acc-two.png"
+                                    alt="фоновое изображение"
+                                    class="about__item-bg"
+                                />
                                 <div class="about__item-left">
                                     <div
                                         class="about__arrow js-accordion-arrow"
@@ -589,6 +618,16 @@
 
                 <div class="director__container container">
                     <div class="director__content">
+                        <div class="director__audio">
+                            <button class="audio-btn" id="audioBtn" hidden>
+                                <img src="./img/director/pause.svg"  alt="Включить звук" id="audioIcon" />
+                            </button>
+
+                            <audio id="bgAudio" loop>
+                                <source src="./img/director/bg.mp3" type="audio/mpeg" />
+                            </audio>
+                        </div>
+
                         <div class="director__img-human">
                             <!-- <img src="./img/director/dir-1.png" alt="Руководитель Корпоративного университета">
                         <img src="./img/director/dir-buble.png" data-dark="./img/director/dir-buble-dark.png"
@@ -771,8 +810,12 @@
                             </p>
                         </div>
 
-                        <ul class="accordion__list js-accordion">
-                            <li class="accordion__item js-accordion-item">
+                        <ul
+                            class="accordion__list js-accordion bg-liquid-glass"
+                        >
+                            <li
+                                class="accordion__item accordion__item-1 js-accordion-item"
+                            >
                                 <img
                                     src="./img/accordion/circle.png"
                                     alt=""
@@ -859,7 +902,9 @@
                                 </div>
                             </li>
 
-                            <li class="accordion__item js-accordion-item">
+                            <li
+                                class="accordion__item accordion__item-2 js-accordion-item"
+                            >
                                 <img
                                     src="./img/accordion/circle.png"
                                     alt=""
@@ -947,7 +992,9 @@
                                 </div>
                             </li>
 
-                            <li class="accordion__item js-accordion-item">
+                            <li
+                                class="accordion__item accordion__item-3 js-accordion-item"
+                            >
                                 <img
                                     src="./img/accordion/circle.png"
                                     alt=""
@@ -1027,7 +1074,9 @@
                                 </div>
                             </li>
 
-                            <li class="accordion__item js-accordion-item">
+                            <li
+                                class="accordion__item accordion__item-4 js-accordion-item"
+                            >
                                 <img
                                     src="./img/accordion/circle.png"
                                     alt=""
@@ -1119,7 +1168,9 @@
                                 </div>
                             </li>
 
-                            <li class="accordion__item js-accordion-item">
+                            <li
+                                class="accordion__item accordion__item-5 js-accordion-item"
+                            >
                                 <img
                                     src="./img/accordion/circle.png"
                                     alt=""
@@ -1250,7 +1301,9 @@
 
                         </li> -->
 
-                            <li class="accordion__item js-accordion-item">
+                            <li
+                                class="accordion__item accordion__item-6 js-accordion-item"
+                            >
                                 <img
                                     src="./img/accordion/circle.png"
                                     alt=""
@@ -1339,7 +1392,9 @@
                                 </div>
                             </li>
 
-                            <li class="accordion__item js-accordion-item">
+                            <li
+                                class="accordion__item accordion__item-7 js-accordion-item"
+                            >
                                 <img
                                     src="./img/accordion/circle.png"
                                     alt=""
@@ -1424,7 +1479,9 @@
                                 </div>
                             </li>
 
-                            <li class="accordion__item js-accordion-item">
+                            <li
+                                class="accordion__item accordion__item-8 js-accordion-item"
+                            >
                                 <img
                                     src="./img/accordion/circle.png"
                                     alt=""
@@ -1506,7 +1563,9 @@
                                 </div>
                             </li>
 
-                            <li class="accordion__item js-accordion-item">
+                            <li
+                                class="accordion__item accordion__item-9 js-accordion-item"
+                            >
                                 <img
                                     src="./img/accordion/circle.png"
                                     alt=""
@@ -1603,6 +1662,10 @@
                         <ul class="slider__list">
                             <li class="slider__item">
                                 <div class="slider__item-content">
+                                    <div class="slider__item-img">
+                                        <img src="#" alt="Фоновое изображние" />
+                                    </div>
+
                                     <h3 class="slider__item-title">Кейс 1</h3>
 
                                     <p class="slider__item-text">
@@ -1623,6 +1686,10 @@
 
                             <li class="slider__item">
                                 <div class="slider__item-content">
+                                    <div class="slider__item-img">
+                                        <img src="#" alt="Фоновое изображние" />
+                                    </div>
+
                                     <h3 class="slider__item-title">кейс 2</h3>
 
                                     <p class="slider__item-text">
@@ -1644,6 +1711,10 @@
 
                             <li class="slider__item">
                                 <div class="slider__item-content">
+                                    <div class="slider__item-img">
+                                        <img src="#" alt="Фоновое изображние" />
+                                    </div>
+
                                     <h3 class="slider__item-title">кейс 3</h3>
 
                                     <p class="slider__item-text">
@@ -1663,6 +1734,10 @@
 
                             <li class="slider__item">
                                 <div class="slider__item-content">
+                                    <div class="slider__item-img">
+                                        <img src="#" alt="Фоновое изображние" />
+                                    </div>
+
                                     <h3 class="slider__item-title">Кейс 1</h3>
 
                                     <p class="slider__item-text">
@@ -1683,6 +1758,10 @@
 
                             <li class="slider__item">
                                 <div class="slider__item-content">
+                                    <div class="slider__item-img">
+                                        <img src="#" alt="Фоновое изображние" />
+                                    </div>
+
                                     <h3 class="slider__item-title">кейс 2</h3>
 
                                     <p class="slider__item-text">
@@ -1704,6 +1783,10 @@
 
                             <li class="slider__item">
                                 <div class="slider__item-content">
+                                    <div class="slider__item-img">
+                                        <img src="#" alt="Фоновое изображние" />
+                                    </div>
+
                                     <h3 class="slider__item-title">кейс 3</h3>
 
                                     <p class="slider__item-text">
@@ -1725,6 +1808,96 @@
                 </div>
             </section>
             <!-- SLIDER -->
+
+            <!-- QUEST -->
+            <section class="quest">
+                <div class="quest__container container js-accordion">
+                    <div class="quest__content js-accordion-item">
+                        <h2 class="quest__title">Часто задаваемые вопросы</h2>
+
+                        <img
+                            src="./img/quest/rounds.png"
+                            alt=""
+                            class="quest__content-img"
+                        />
+
+                        <div class="quest__content-arrow js-accordion-arrow">
+                            <svg
+                                width="8"
+                                height="13"
+                                viewBox="0 0 8 13"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M1.0498 11.55L6.2998 6.29588L1.0498 1.04999"
+                                    stroke="white"
+                                    stroke-width="2.1"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+
+                        <div class="quest__lists js-accordion-content">
+                            <ul class="quest__list">
+                                <li class="quest__item">
+                                    <h3 class="quest__item-title">
+                                        Почему небо голубое?
+                                    </h3>
+
+                                    <span class="quest__item-text">
+                                        Небо выглядит голубым из-за физического
+                                        процесса рэлеевского
+                                        рассеяния — рассеяния света на молекулах
+                                        воздуха (кислорода и азота)
+                                    </span>
+                                </li>
+
+                                <li class="quest__item">
+                                    <h3 class="quest__item-title">
+                                        Почему небо голубое?
+                                    </h3>
+
+                                    <span class="quest__item-text">
+                                        Небо выглядит голубым из-за физического
+                                        процесса рэлеевского
+                                        рассеяния — рассеяния света на молекулах
+                                        воздуха (кислорода и азота)
+                                    </span>
+                                </li>
+
+                                <li class="quest__item">
+                                    <h3 class="quest__item-title">
+                                        Почему небо голубое?
+                                    </h3>
+
+                                    <span class="quest__item-text">
+                                        Небо выглядит голубым из-за физического
+                                        процесса рэлеевского
+                                        рассеяния — рассеяния света на молекулах
+                                        воздуха (кислорода и азота)
+                                    </span>
+                                </li>
+
+                                <li class="quest__item">
+                                    <h3 class="quest__item-title">
+                                        Почему небо голубое?
+                                    </h3>
+
+                                    <span class="quest__item-text">
+                                        Небо выглядит голубым из-за физического
+                                        процесса рэлеевского
+                                        рассеяния — рассеяния света на молекулах
+                                        воздуха (кислорода и азота)
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- QUEST -->
 
             <!-- FORM -->
             <section class="form" id="form">
@@ -2697,7 +2870,6 @@
                 aria-labelledby="ckTitle"
             >
                 <div class="ck-modal">
-
                     <h2 class="ck-title" id="ckTitle">
                         Мы используем файлы cookie
                     </h2>
@@ -2817,6 +2989,32 @@
 
                 <div class="footer__icons">
                     <ul class="footer__list">
+                        <li class="footer__item">
+                            <a
+                                href="https://t.me/+4sVVcg3BrUkyZjAy"
+                                class="footer__link"
+                                target="_blank"
+                            >
+                                <div class="footer__item-white"></div>
+                                <img
+                                    src="./img/footer/vsru.svg"
+                                    alt="Мессенджер Телеграм"
+                                />
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a
+                                href="https://t.me/+4sVVcg3BrUkyZjAy"
+                                class="footer__link"
+                                target="_blank"
+                            >
+                                <div class="footer__item-white"></div>
+                                <img
+                                    src="./img/footer/dzen.svg"
+                                    alt="Мессенджер Телеграм"
+                                />
+                            </a>
+                        </li>
                         <li class="footer__item">
                             <a
                                 href="https://t.me/+4sVVcg3BrUkyZjAy"
@@ -2997,7 +3195,7 @@
                 window,
                 document,
                 "script",
-                "https://mc.yandex.ru/metrika/tag.js",
+                "https://mc.yandex.ru/metrika/tag.js?id=108710508",
                 "ym",
             );
 
@@ -3015,16 +3213,18 @@
                 });
             };
         </script>
-        <noscript
-            ><div>
+        <noscript>
+            <div>
                 <img
                     src="https://mc.yandex.ru/watch/108710508"
                     style="position: absolute; left: -9999px"
                     alt=""
-                /></div
-        ></noscript>
+                />
+            </div>
+        </noscript>
         <!-- /Yandex.Metrika counter -->
-         
+
         <script src="./script/cookie.js?v1.1"></script>
+        <script src="./script/audio.js"></script>
     </body>
 </html>

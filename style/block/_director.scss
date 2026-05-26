@@ -40,7 +40,38 @@
             padding-left: 20px;
             background: var(--color-content-director-mobile);
             border-radius: 0 85px 0 0;
+        }
+    }
 
+    &__audio {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 93px;
+        height: 93px;
+    }
+
+    .audio-btn {
+        width: 100%;
+        height: 100%;
+        
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+
+        &[hidden] {
+            display: none;
+        }
+
+        &:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(0, 137, 201, 0.5);
         }
     }
 
@@ -85,8 +116,6 @@
             text-align: center;
             border: 2px solid var(--border-doc-border);
         }
-
-
     }
 
     &__title {
@@ -124,7 +153,6 @@
             width: 54%;
             height: auto;
         }
-
     }
 
     &__img-circle {

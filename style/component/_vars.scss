@@ -42,6 +42,15 @@
 	--color-bg-item: #e8f7fd;
 	--color-arrow: rgba(154, 219, 249, 0.77);
 	--color-btn: #fff;
+	// quest
+	--color-bg-quest: linear-gradient(
+        180deg,
+        #e7f3f8 0%,
+        #c3ecfd 26.92%,
+        #b2e8ff 53.37%,
+        #c3ecfd 71.63%,
+        #e7f3f8 100%
+    );
 	//form
 	--color-form-title: radial-gradient(50.00% 50.00% at 50.00% 50.00%, rgb(38, 42, 66) 29.807692766189575%, rgb(9, 127, 183) 96.15384340286255%);
 	--color-option: rgba(154, 198, 218, 0.3);
@@ -122,6 +131,8 @@
 	--color-bg-item: #002232;
 	--color-arrow: #002232;
 	--color-btn: #72787D;
+	// quest
+	--color-bg-quest: trasparent;
 	//form
 	--color-form-title: radial-gradient(50.00% 50.00% at 50.00%  50.00%, rgb(255, 255, 255) 29.807692766189575%, rgb(9, 127, 183) 96.15384340286255%);
 	--color-option: rgba(154, 198, 218, 0.3);
