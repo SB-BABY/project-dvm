@@ -22,18 +22,18 @@
     &__bg {
         position: absolute;
         top: 2%;
-        left: 30%;
+        left: 27%;
         transform: translate(-50%, -50%);
         z-index: 5;
-        width: 70%;
+        width: 60%;
         height: auto;
 
         @include desktop {
-            top: -20%;
+            top: -2%;
         }
 
         @include tablet {
-            top: 0%;
+            top: 2%;
         }
 
         @include mobile {

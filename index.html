@@ -35,7 +35,7 @@
         />
         <!-- SLIDER -->
         <!-- CSS -->
-        <link rel="stylesheet" href="css/style.min.css?v=2.14" />
+        <link rel="stylesheet" href="css/style.min.css?v=2.16" />
         <!-- CSS -->
         <title>Корпоративный университет Агентства Инноваций</title>
     </head>
@@ -348,14 +348,18 @@
                             Программы дополнительного профессионального
                             образования для нового поколения руководителей
                         </p>
+                        <div class="hero__btns">
+                            <button
+                                class="open-modal-btn hero__btn button"
+                                data-modal="modal-1"
+                            >
+                                Подробнее
+                            </button>
 
-                        <!-- <a href="#form" class="hero__btn button">Записаться на обучение</a> -->
-                        <button
-                            class="open-modal-btn hero__btn button"
-                            data-modal="modal-1"
-                        >
-                            Записаться на обучение
-                        </button>
+                            <span class="hero__btn-text">
+                                *Эта кнопка создана для тех, кто не привык ждать
+                            </span>
+                        </div>
                     </div>
 
                     <div class="hero__right">
@@ -619,12 +623,17 @@
                 <div class="director__container container">
                     <div class="director__content">
                         <div class="director__audio">
-                            <button class="audio-btn" id="audioBtn" hidden>
-                                <img src="./img/director/play.svg"  alt="Включить звук" id="audioIcon" />
-                            </button>
+                            <img
+                                src="./img/director/play.svg"
+                                alt="Включить звук"
+                                id="audioIcon"
+                            />
 
                             <audio id="bgAudio" loop>
-                                <source src="./img/director/bg.mp3" type="audio/mpeg" />
+                                <source
+                                    src="./img/director/bg.mp3"
+                                    type="audio/mpeg"
+                                />
                             </audio>
                         </div>
 
@@ -715,11 +724,11 @@
 
             <!-- ADVANTAGES -->
             <section class="advantages" id="advantages">
-                <img
+                <!-- <img
                     src="./img/advantages/bg.png"
                     alt="Фоновое изображение"
                     class="advantages__img-bg"
-                />
+                /> -->
                 <div class="advantages__container container">
                     <h2 class="advantages__title">
                         Преимущества <br />
@@ -790,6 +799,11 @@
 
             <!-- ACCORDION -->
             <section class="accordion" id="accordion">
+                <img
+                    src="./img/advantages/bg.png"
+                    alt="Фоновое изображение"
+                    class="accordion__img-bg"
+                />
                 <div class="accordion__container container">
                     <div class="accordion__content">
                         <h2 class="accordion__title">
@@ -821,6 +835,8 @@
                                     alt=""
                                     class="accordion__item-img"
                                 />
+
+                                <img src="./img/accordion/1.png" alt="фоновое" class="accordion__item-bg">
 
                                 <div
                                     class="accordion__item-arrow js-accordion-arrow"
@@ -910,6 +926,8 @@
                                     alt=""
                                     class="accordion__item-img"
                                 />
+
+                                <img src="./img/accordion/2.png" alt="фоновое" class="accordion__item-bg">
 
                                 <div
                                     class="accordion__item-arrow js-accordion-arrow"
@@ -1001,6 +1019,8 @@
                                     class="accordion__item-img"
                                 />
 
+                                <img src="./img/accordion/3.png" alt="фоновое" class="accordion__item-bg">
+
                                 <div
                                     class="accordion__item-arrow js-accordion-arrow"
                                 >
@@ -1082,6 +1102,8 @@
                                     alt=""
                                     class="accordion__item-img"
                                 />
+
+                                <img src="./img/accordion/4.png" alt="фоновое" class="accordion__item-bg">
 
                                 <div
                                     class="accordion__item-arrow js-accordion-arrow"
@@ -1177,6 +1199,8 @@
                                     class="accordion__item-img"
                                 />
 
+                                <img src="./img/accordion/5.png" alt="фоновое" class="accordion__item-bg">
+
                                 <div
                                     class="accordion__item-arrow js-accordion-arrow"
                                 >
@@ -1255,52 +1279,6 @@
                                 </div>
                             </li>
 
-                            <!-- <li class="accordion__item js-accordion-item">
-                            <img src="./img/accordion/circle.png" alt="" class="accordion__item-img">
-
-                            <div class="accordion__item-arrow js-accordion-arrow">
-                                <svg width="8" height="13" viewBox="0 0 8 13" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.0498 11.55L6.2998 6.29588L1.0498 1.04999" stroke="white"
-                                        stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-
-                            <div class="accordion__top">
-                                <h3 class="accordion__item-title">
-                                    Повышение операционной и производственной эффективности
-                                </h3>
-
-                            </div>
-
-                            <div class="accordion__bottom js-accordion-content">
-                                <div class="accordion__bottom-text">
-                                    <p>
-                                        В разработке.
-                                    </p>
-                                    <p>
-                                        В разработке.
-                                    </p>
-                                    <p>
-                                        <span>Формат:</span> В разработке.
-                                    </p>
-                                </div>
-
-                                <button class="open-modal-btn accordion__bottom-button button-second"
-                                    data-modal="modal-1">
-                                    Узнать больше
-                                    <div class="button-arrow">
-                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 5L11 5M11 5L7 1M11 5L7 9" stroke="#0089C9" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </div>
-                                </button>
-                            </div>
-
-                        </li> -->
-
                             <li
                                 class="accordion__item accordion__item-6 js-accordion-item"
                             >
@@ -1309,6 +1287,8 @@
                                     alt=""
                                     class="accordion__item-img"
                                 />
+
+                                <img src="./img/accordion/6.png" alt="фоновое" class="accordion__item-bg">
 
                                 <div
                                     class="accordion__item-arrow js-accordion-arrow"
@@ -1401,6 +1381,8 @@
                                     class="accordion__item-img"
                                 />
 
+                                <img src="./img/accordion/7.png" alt="фоновое" class="accordion__item-bg">
+
                                 <div
                                     class="accordion__item-arrow js-accordion-arrow"
                                 >
@@ -1488,6 +1470,8 @@
                                     class="accordion__item-img"
                                 />
 
+                                <img src="./img/accordion/8.png" alt="фоновое" class="accordion__item-bg">
+
                                 <div
                                     class="accordion__item-arrow js-accordion-arrow"
                                 >
@@ -1571,6 +1555,8 @@
                                     alt=""
                                     class="accordion__item-img"
                                 />
+
+                                <img src="./img/accordion/9.png" alt="фоновое" class="accordion__item-bg">
 
                                 <div
                                     class="accordion__item-arrow js-accordion-arrow"
@@ -1663,7 +1649,7 @@
                             <li class="slider__item">
                                 <div class="slider__item-content">
                                     <div class="slider__item-img">
-                                        <img src="#" alt="Фоновое изображние" />
+                                        <!-- <img src="#" alt="Фоновое изображние" /> -->
                                     </div>
 
                                     <h3 class="slider__item-title">Кейс 1</h3>
@@ -1687,7 +1673,7 @@
                             <li class="slider__item">
                                 <div class="slider__item-content">
                                     <div class="slider__item-img">
-                                        <img src="#" alt="Фоновое изображние" />
+                                        <!-- <img src="#" alt="Фоновое изображние" /> -->
                                     </div>
 
                                     <h3 class="slider__item-title">кейс 2</h3>
@@ -1712,7 +1698,7 @@
                             <li class="slider__item">
                                 <div class="slider__item-content">
                                     <div class="slider__item-img">
-                                        <img src="#" alt="Фоновое изображние" />
+                                        <!-- <img src="#" alt="Фоновое изображние" /> -->
                                     </div>
 
                                     <h3 class="slider__item-title">кейс 3</h3>
@@ -1735,7 +1721,7 @@
                             <li class="slider__item">
                                 <div class="slider__item-content">
                                     <div class="slider__item-img">
-                                        <img src="#" alt="Фоновое изображние" />
+                                        <!-- <img src="#" alt="Фоновое изображние" /> -->
                                     </div>
 
                                     <h3 class="slider__item-title">Кейс 1</h3>
@@ -1759,7 +1745,7 @@
                             <li class="slider__item">
                                 <div class="slider__item-content">
                                     <div class="slider__item-img">
-                                        <img src="#" alt="Фоновое изображние" />
+                                        <!-- <img src="#" alt="Фоновое изображние" /> -->
                                     </div>
 
                                     <h3 class="slider__item-title">кейс 2</h3>
@@ -1784,7 +1770,7 @@
                             <li class="slider__item">
                                 <div class="slider__item-content">
                                     <div class="slider__item-img">
-                                        <img src="#" alt="Фоновое изображние" />
+                                        <!-- <img src="#" alt="Фоновое изображние" /> -->
                                     </div>
 
                                     <h3 class="slider__item-title">кейс 3</h3>
@@ -1810,7 +1796,7 @@
             <!-- SLIDER -->
 
             <!-- QUEST -->
-            <section class="quest">
+            <!-- <section class="quest">
                 <div class="quest__container container js-accordion">
                     <div class="quest__content js-accordion-item">
                         <h2 class="quest__title">Часто задаваемые вопросы</h2>
@@ -1896,7 +1882,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- QUEST -->
 
             <!-- FORM -->
@@ -2870,72 +2856,26 @@
                 aria-labelledby="ckTitle"
             >
                 <div class="ck-modal">
-                    <h2 class="ck-title" id="ckTitle">
-                        Мы используем файлы cookie
-                    </h2>
-
-                    <p class="ck-text">
-                        Наш сайт использует cookie-файлы для аналитики,
-                        улучшения работы и персонализации контента, в том числе
-                        с помощью <strong>Яндекс.Метрики</strong>. Подробнее — в
-                        нашей
+                    <p class="ck-text" id="ckTitle">
+                        Мы используем файлы cookie, оставаясь на сайте вы
+                        соглашаетесь на их использование.
                         <a
                             href="./documents/cookie.pdf"
                             target="_blank"
                             rel="noopener"
                             class="ck-link"
-                            >политике конфиденциальности</a
-                        >.
+                            >Подробнее</a
+                        >
                     </p>
 
-                    <!-- Настройки (разворачиваются) -->
-                    <div class="ck-settings" id="ckSettings" hidden>
-                        <div class="ck-toggle-row">
-                            <div class="ck-toggle-info">
-                                <span class="ck-toggle-label">Необходимые</span>
-                                <span class="ck-toggle-desc"
-                                    >Обеспечивают базовую работу сайта</span
-                                >
-                            </div>
-                            <label class="ck-toggle ck-toggle--disabled">
-                                <input type="checkbox" checked disabled />
-                                <span class="ck-toggle-track"></span>
-                            </label>
-                        </div>
-
-                        <div class="ck-toggle-row">
-                            <div class="ck-toggle-info">
-                                <span class="ck-toggle-label"
-                                    >Аналитические</span
-                                >
-                                <span class="ck-toggle-desc"
-                                    >Яндекс.Метрика, статистика посещений</span
-                                >
-                            </div>
-                            <label class="ck-toggle">
-                                <input
-                                    type="checkbox"
-                                    id="ckAnalytics"
-                                    checked
-                                />
-                                <span class="ck-toggle-track"></span>
-                            </label>
-                        </div>
-                    </div>
-
                     <div class="ck-actions">
-                        <button class="ck-btn ck-btn--ghost" id="ckConfigure">
-                            Настроить
-                        </button>
-                        <button class="ck-btn ck-btn--outline" id="ckDecline">
-                            Отклонить
-                        </button>
                         <button class="ck-btn ck-btn--primary" id="ckAccept">
-                            Принять все
+                            Хорошо
                         </button>
                     </div>
                 </div>
             </div>
+            <!-- COOKIE -->
             <!-- COOKIE -->
         </main>
         <!-- MAIN -->
@@ -3173,7 +3113,6 @@
 
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript">
-            // Загружаем только тег.js, но НЕ инициализируем
             (function (m, e, t, r, i, k, a) {
                 m[i] =
                     m[i] ||
@@ -3199,32 +3138,28 @@
                 "ym",
             );
 
-            // Инициализация вынесена в функцию — вызывается только после согласия
-            window.initYandexMetrika = function () {
-                ym(108710508, "init", {
-                    ssr: true,
-                    webvisor: true,
-                    clickmap: true,
-                    ecommerce: "dataLayer",
-                    referrer: document.referrer,
-                    url: location.href,
-                    accurateTrackBounce: true,
-                    trackLinks: true,
-                });
-            };
+            ym(108710508, "init", {
+                ssr: true,
+                webvisor: true,
+                clickmap: true,
+                ecommerce: "dataLayer",
+                referrer: document.referrer,
+                url: location.href,
+                accurateTrackBounce: true,
+                trackLinks: true,
+            });
         </script>
-        <noscript>
-            <div>
+        <noscript
+            ><div>
                 <img
                     src="https://mc.yandex.ru/watch/108710508"
                     style="position: absolute; left: -9999px"
                     alt=""
-                />
-            </div>
-        </noscript>
+                /></div
+        ></noscript>
         <!-- /Yandex.Metrika counter -->
 
-        <script src="./script/cookie.js?v1.1"></script>
-        <script src="./script/audio.js"></script>
+        <script src="./script/cookie.js?v1.4"></script>
+        <script src="./script/audio.js?v1.1"></script>
     </body>
 </html>
